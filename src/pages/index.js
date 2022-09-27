@@ -53,7 +53,6 @@ const IndexPage = ({ data }) => {
             alt="Anna Klibanov headshot"
             className = "h-full w-full "
             imgClassName="rounded-full"
-            placeholder="blurred"
             objectFit="contain"
             imgStyle={{
               width: 'auto',
