@@ -54,6 +54,7 @@ const IndexPage = ({ data }) => {
             className = "h-full w-full "
             imgClassName="rounded-full"
             objectFit="contain"
+            placeholder="none"
             imgStyle={{
               width: 'auto',
               margin: '0 auto'
