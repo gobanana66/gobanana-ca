@@ -127,7 +127,7 @@ const IndexPage = ({ data }) => {
             </p>
             <a href="mailto:hithere@gobanana.ca" className="block text-slate-400 hover:underline hover:text-pink-600">hithere@gobanana.ca</a>
             <span className="">@gobanana66</span> on <a href="https://twitter.com/gobanana66" target="_blank" className="text-slate-400 hover:underline hover:text-pink-600">Twitter</a>, <a target="_blank" href="https://dribbble.com/gobanana66" className="text-slate-400 hover:underline hover:text-pink-600">Dribbble</a>, <a target="_blank" href="https://github.com/gobanana66" className="text-slate-400 hover:underline hover:text-pink-600">GitHub</a>
-            <a href={resumePDF} className="block w-fit bg-pink-600 hover:bg-blue-700 text-white text-sm mt-10 py-2 px-4 rounded-full">Download Resume</a>
+            <a href={resumePDF} target="_blank" className="block w-fit bg-pink-600 hover:bg-blue-700 text-white text-sm mt-10 py-2 px-4 rounded-full">Download Resume</a>
         </div>
       </section>
     </Layout>
