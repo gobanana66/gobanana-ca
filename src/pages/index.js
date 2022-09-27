@@ -7,35 +7,35 @@ import resumePDF from "./AnnaKlibanovResume.pdf"
 
 const resume = [
   {
-    year: "2010-Present",
+    year: "2010–Present",
     title: "Freelance Designer/Developer",
     company: "GoBanana Design",
     description:
       "Extensive experience working with clients across all industries and media. Worked with clients on small projects like single-page websites as well as large-scale projects including print and digital materials from concept to full execution installations."
   },
   {
-    year: "2020-2022",
+    year: "2020–2022",
     title: "Scrum Master (CSM)",
     company: "Edsby",
     description:
       "Led a 20+ person engineering team in Agile development. Facilitated relationships with the Product Owner, business team, customer needs, and other stakeholders to ensure a clear and seamless product development process with best practices and user-centred design processes."
   },
   {
-    year: "2011-2022",
+    year: "2011–2022",
     title: "Senior Product Designer / Senior UX/UI Desiner / Front-End Developer",
     company: "Edsby",
     description:
       "Designed and implemented user interfaces of the software to create an easy and pleasant user experience, taking into account market research, user testing, customer needs, and business requirements to iterate through designs for the most effective solutions. Collaborated with the engineering team to ensure implementation of designs and seamless product deployment. Designed, created, and maintained all public-facing marketing materials across different media."
   },
   {
-    year: "2010-2011",
+    year: "2010–2011",
     title: "Graphic and Web Designer / Front-End Web Developer",
     company: "Ingle International",
     description:
       "Designed and developed websites for clients, created intuitive user interfaces for web applications, and worked closely with programmers to achieve optimal functionality. Created other materials for the company and its clients, such as interactive flash presentations and print materials."
   },
   {
-    year: "2008-2011",
+    year: "2008–2011",
     title: "Web Designer and Technician",
     company: "York University",
     description:
