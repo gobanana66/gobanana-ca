@@ -19,7 +19,7 @@
     "description":
       "Small tool to pull tweet data using tweet ID. Primarily created for Edsby marketing team to facilitate easy tweet graphics for email newsletters",
     "tags": ["javascript","api"],
-    "liveURL": "https://gobanana.ca/tweet2jpg/",
+    "liveURL": "https://tweet2jpg.gobanana.ca/",
     "github": "https://github.com/gobanana66/Tweet2JPG"
   }, 
   {
@@ -34,7 +34,7 @@
     "description":
       "Baby pool tracker. Everyone enters their guesses which get input into a Google Sheet and then a winner is selected via a points system. Plus a cute little pure css penguin loader animation for extra whimsy.",
     "tags": ["javascript","api","html"],
-    "liveURL": "https://gobanana.ca/babyrider/"
+    "liveURL": "https://babyrider.gobanana.ca/"
   }, 
   {
     "title": "SharkBot",
@@ -48,7 +48,7 @@
     "description":
       "A custom lightweight wedding website, all illustrations and lettering are custom-made, also includes parallax animations.",
     "tags": ["html", "design"],
-    "liveURL": "https://gobanana.ca/paulandjessica/"
+    "liveURL": "https://paulandjessica.gobanana.ca/"
   }, 
   {
     "title": "Age of Lapin",
