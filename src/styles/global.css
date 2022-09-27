@@ -76,3 +76,19 @@ nav li a[aria-current] {
 .tag-php {
     background: #8892be;
 }
+
+
+.portfolio a.portfolio-image {
+    display: block;
+    overflow: hidden;
+    
+}
+
+.portfolio a.portfolio-image,
+.portfolio a.portfolio-image * {
+    transition: all .2s ease-in-out;
+}
+
+.portfolio a.portfolio-image:hover img {
+    transform:scale(1.05);
+}

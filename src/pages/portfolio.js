@@ -23,14 +23,14 @@ const PortfolioPage = ({ data }) => {
         {JSONData.content.map((item, index) => {
           if(getImagePath(item.title)) {
             return <div key={index} className="portfolio-item text-lg">
-              <GatsbyImage 
+              <a className="rounded-md portfolio-image" target="_blank" title={item.title} href={item.liveURL ? item.liveURL: item.github }><GatsbyImage 
                 image={getImagePath(item.title).childImageSharp.gatsbyImageData} 
                 alt={item.title} 
                 className = "h-[200px] w-full "
                 imgClassName="rounded-md"
                 placeholder="blurred"
-                objectPosition={"top"} />
-              <div className="title font-semibold text-pink-600 text-xl mt-4"><a target="_blank" href={item.liveURL ? item.liveURL: item.github } className="hover:underline">{item.title}</a></div>
+                objectPosition={"top"} /></a>
+              <div className="title font-semibold text-pink-600 text-xl mt-4"><a target="_blank" title={item.title} href={item.liveURL ? item.liveURL: item.github } className="hover:underline">{item.title}</a></div>
                 <div className="tags flex flex-wrap gap-2 mt-2 mb-5 text-xs">
                   {item.tags && item.tags.map(tag => (
                     <span key={tag} className={"tag tag-" + tag} > { tag }</span>
