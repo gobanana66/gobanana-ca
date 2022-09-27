@@ -32,14 +32,16 @@ nav ul {
 nav li a {
     padding-bottom:5px;
     transition: all 0.3s;
+    opacity: 0.6;
 }
 
 nav li a:hover {
-    color: rgb(219 39 119 / var(--tw-text-opacity));
+    opacity: 1;
 }
 
 nav li a[aria-current] {
     border-bottom:3px solid rgb(219 39 119 / var(--tw-text-opacity));
+    opacity: 1;
 }
 
 
