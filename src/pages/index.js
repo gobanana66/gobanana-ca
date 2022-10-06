@@ -22,7 +22,7 @@ const resume = [
   },
   {
     year: "2011–2022",
-    title: "Senior Product Designer / Senior UX/UI Desiner / Front-End Developer",
+    title: "Senior Product Designer / Senior UX/UI Designer / Front-End Developer",
     company: "Edsby",
     description:
       "Designed and implemented user interfaces of the software to create an easy and pleasant user experience, taking into account market research, user testing, customer needs, and business requirements to iterate through designs for the most effective solutions. Collaborated with the engineering team to ensure implementation of designs and seamless product deployment. Designed, created, and maintained all public-facing marketing materials across different media."
