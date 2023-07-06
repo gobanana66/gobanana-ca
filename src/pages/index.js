@@ -71,7 +71,7 @@ const IndexPage = ({ data }) => {
         Most recently, I worked at Edsby, creating K-12 education software for students, parents, teachers, and administrators. It was my job to unify the learning management and remote learning experience across all four stakeholders. Over my tenure at Edsby, I worked on the initial product idea building it up to its current iteration with over 215 million users worldwide and winning more than 70 awards. I was responsible for the design and front-end development of the product as well as all public-facing materials including the website, marketing materials, case studies, and promotional video content.
         </p>
       </div>
-      <section className="py-5 resume"><a id="resume" />
+      <section className="py-5" id="resume">
         <h2 className="w-full my-2 mb-8 text-3xl font-bold">
             Work Experience
         </h2>
@@ -92,7 +92,7 @@ const IndexPage = ({ data }) => {
         ))}
         </div>
       </section> 
-      <section className="py-5 skills">
+      <section className="py-5" id="skills">
         <div className="container text-base mx-auto pt-4 pb-12 text-xl">
           <h2 className="w-full my-2 mb-8 text-3xl font-bold">
               Skills
@@ -127,8 +127,8 @@ const IndexPage = ({ data }) => {
                 I'm currently considering opportunities as a Product Designer or if my skillset matches the missing puzzle piece to your project I'm available for freelance work.
             </p>
             <a href="mailto:hithere@gobanana.ca" className="block text-slate-400 hover:underline hover:text-pink-600">hithere@gobanana.ca</a>
-            <span className="">@gobanana66</span> on <a href="https://twitter.com/gobanana66" target="_blank" className="text-slate-400 hover:underline hover:text-pink-600">Twitter</a>, <a target="_blank" href="https://dribbble.com/gobanana66" className="text-slate-400 hover:underline hover:text-pink-600">Dribbble</a>, <a target="_blank" href="https://github.com/gobanana66" className="text-slate-400 hover:underline hover:text-pink-600">GitHub</a>
-            <a href={resumePDF} target="_blank" className="block w-fit bg-pink-600 hover:bg-blue-700 text-white text-sm mt-10 py-2 px-4 rounded-full">Download Resume</a>
+            <span className="">@gobanana66</span> on <a href="https://twitter.com/gobanana66" target="_blank" rel="noreferrer" className="text-slate-400 hover:underline hover:text-pink-600">Twitter</a>, <a target="_blank" rel="noreferrer" href="https://dribbble.com/gobanana66" className="text-slate-400 hover:underline hover:text-pink-600">Dribbble</a>, <a target="_blank" rel="noreferrer" href="https://github.com/gobanana66" className="text-slate-400 hover:underline hover:text-pink-600">GitHub</a>
+            <a href={resumePDF} target="_blank" rel="noreferrer" className="block w-fit bg-pink-600 hover:bg-blue-700 text-white text-sm mt-10 py-2 px-4 rounded-full">Download Resume</a>
         </div>
       </section>
     </Layout>

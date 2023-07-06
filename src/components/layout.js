@@ -29,7 +29,7 @@ const Layout = ({ pageTitle, children }) => {
       </main>
       <footer>
         <div className="copyright text-center text-gray-600 text-xs my-2">2023 © Anna Klibanov. All rights reserved.</div>
-        <div className="copyright text-center text-gray-600 text-xs my-2">Made with <a  target="_blank" href="https://www.gatsbyjs.com/" className='underline'>GatsbyJS</a> + <a target="_blank" hrerf="https://tailwindcss.com/" className='underline'>TailwindCSS</a></div>
+        <div className="copyright text-center text-gray-600 text-xs my-2">Made with <a target="_blank" rel="noreferrer" href="https://www.gatsbyjs.com/" className='underline'>GatsbyJS</a> + <a target="_blank" rel="noreferrer" href="https://tailwindcss.com/" className='underline'>TailwindCSS</a></div>
         </footer></div>
   )
 }
