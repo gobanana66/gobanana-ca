@@ -72,7 +72,7 @@ const IndexPage = ({ data }) => {
             Hi, I'm Anna
         </h1>
         <p className="leading-normal text-xl mb-8">
-        Over the the last 15 years, I've worked across diverse industries designing and building software. My most scaled work was at Edsby, an education platform servicing over 215 million users worldwide and winning more than 70 awards. My passion lies in crafting functional and user-centric products, where I meticulously consider both high-level perspectives and minute details. My skill set, spanning creative, practical, and technical domains, gives me a unique approach to product design and management. I'm creative, adaptive, and love to learn. I am motivated by a challenge and love the reward of overcoming obstacles.
+        Over the last 15 years, I've worked across diverse industries designing and building software. My most scaled work was at Edsby, an education platform servicing over 215 million users worldwide and winning more than 70 awards. My passion lies in crafting functional and user-centric products, where I meticulously consider both high-level perspectives and minute details. My skill set, spanning creative, practical, and technical domains, gives me a unique approach to product design and management. I'm creative, adaptive, and love to learn. I am motivated by a challenge and love the reward of overcoming obstacles.
         </p>
       </div>
       <section className="py-5" id="resume">
