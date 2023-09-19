@@ -15,7 +15,7 @@ const resume = [
   },
   {
     year: "2022–2023",
-    title: "Senior UI/UX Designer",
+    title: "Senior UX/UI Designer",
     company: "ActiveState",
     description:
       "Managed a design team to deliver solutions that offered an exceptional user experience while meeting business requirements. Employed key performance indicators (KPIs) and Net Promoter Score (NPS) metrics to measure the success of the designs, ensuring they aligned with company goals. Worked closely with the engineering team on the effective execution of the designs. Participated and assisted in product management and planning to achieve strategic objectives."
