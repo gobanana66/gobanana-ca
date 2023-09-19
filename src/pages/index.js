@@ -71,11 +71,8 @@ const IndexPage = ({ data }) => {
         <h1 className="my-4 text-5xl font-bold leading-tight">
             Hi, I'm Anna
         </h1>
-        <p className="leading-snug text-3xl font-semibold mb-8">
-          I've been designing and building software for over 14 years with a strong focus on an intuitive and seamless user experience. I'm creative, adaptive, and love to learn. I am motivated by a challenge and love the reward of overcoming obstacles.
-        </p>
         <p className="leading-normal text-xl mb-8">
-        Most recently, I worked at Edsby, creating K-12 education software for students, parents, teachers, and administrators. It was my job to unify the learning management and remote learning experience across all four stakeholders. Over my tenure at Edsby, I worked on the initial product idea building it up to its current iteration with over 215 million users worldwide and winning more than 70 awards. I was responsible for the design and front-end development of the product as well as all public-facing materials including the website, marketing materials, case studies, and promotional video content.
+        Over the the last 15 years, I've worked across diverse industries designing and building software. My most scaled work was at Edsby, an education platform servicing over 215 million users worldwide and winning more than 70 awards. My passion lies in crafting functional and user-centric products, where I meticulously consider both high-level perspectives and minute details. My skill set, spanning creative, practical, and technical domains, gives me a unique approach to product design and management. I'm creative, adaptive, and love to learn. I am motivated by a challenge and love the reward of overcoming obstacles.
         </p>
       </div>
       <section className="py-5" id="resume">
