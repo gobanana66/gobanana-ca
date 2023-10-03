@@ -107,12 +107,14 @@ const IndexPage = ({ data }) => {
                   <li>UX/UI design</li>
                   <li>User research and testing</li>
                   <li>Wireframing and prototyping</li>
+                  <li>Design systems</li>
                   <li>Web development</li>
                   <li>Branding</li>
                   <li>Project management</li>
-                  <li>Agile (Scrum) methodologies</li>
+                  
                 </ul>
                 <ul className="list-disc ml-[20px] leading-loose">
+                <li>Agile (Scrum) methodologies</li>
                   <li>Team leadership</li>
                   <li>Verbal, written, and interpersonal communication</li>
                   <li>Adobe Creative Suite</li>
