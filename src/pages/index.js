@@ -20,7 +20,7 @@ const resume = [
     company: "ActiveState",
     bullets: [
       "Managed a design team to deliver low-and high-fidelity wireframes, mockups, and prototypes that offered exceptional user experiences",
-      "Employed tools and metrics to measure success of designs, conduct user experiments, and promote Product Led Growth",
+      "Employed tools and metrics to measure the success of designs, conduct user experiments, and promote Product Led Growth",
       "Worked closely with engineering teams on the effective execution of the designs",
       "Collaborated with cross-functional teams and product managers in roadmap planning and setting quarterly goals"
     ]
