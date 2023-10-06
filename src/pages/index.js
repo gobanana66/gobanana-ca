@@ -2,7 +2,7 @@ import * as React from "react"
 import Layout from '../components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import resumePDF from "./AnnaKlibanovResume.pdf"
-
+import GatsbyConfig from '../../gatsby-config'
 
 
 const resume = [
@@ -144,4 +144,9 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage
 
-export const Head = () => <title>Anna Klibanov - Product Designer / Front-End Web Developer</title>
+export const Head = () => (
+  <>
+    <title>{GatsbyConfig.siteMetadata.title}</title>
+    <meta name="description" content={GatsbyConfig.siteMetadata.description} />
+  </>
+)
