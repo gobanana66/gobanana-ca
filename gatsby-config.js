@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `GoBanana-gatsby`,
-    siteUrl: `https://gobanana.ca`
+    title: `Anna Klibanov - Product Designer / Front-End Web Developer`,
+    siteUrl: `https://gobanana.ca`, 
+    description: `Anna Klibanov is a Product and UX/UI Designer with a passion for crafting user-centric software by integrating creative, practical, and technical skills.`
   },
   plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp","gatsby-plugin-anchor-links", {
     resolve: 'gatsby-source-filesystem',
