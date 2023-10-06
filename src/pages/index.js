@@ -10,44 +10,60 @@ const resume = [
     year: "2010–Present",
     title: "Freelance Designer/Developer",
     company: "GoBanana Design",
-    description:
-      "Extensive experience working with clients across all industries and media. Worked with clients on small projects like single-page websites as well as large-scale projects including print and digital materials from concept to full execution installations."
+    bullets: [
+      "Extensive experience working with clients across all industries and media", 
+      "Worked with clients on small projects like single-page websites as well as large-scale projects including print and digital materials from concept to full execution installations."]
   },
   {
     year: "2022–2023",
     title: "Senior UX/UI Designer",
     company: "ActiveState",
-    description:
-      "Managed a design team to deliver solutions that offered an exceptional user experience while meeting business requirements. Employed key performance indicators (KPIs) and Net Promoter Score (NPS) metrics to measure the success of the designs, ensuring they aligned with company goals. Worked closely with the engineering team on the effective execution of the designs. Participated and assisted in product management and planning to achieve strategic objectives."
+    bullets: [
+      "Managed a design team to deliver low-and high-fidelity wireframes, mockups, and prototypes that offered exceptional user experiences",
+      "Employed tools and metrics to measure success of designs, conduct user experiments, and promote Product Led Growth",
+      "Worked closely with engineering teams on the effective execution of the designs",
+      "Collaborated with cross-functional teams and product managers in roadmap planning and setting quarterly goals"
+    ]
   },
   {
     year: "2020–2022",
     title: "Scrum Master (CSM)",
     company: "Edsby",
-    description:
-      "Led a 20+ person engineering team in Agile development. Facilitated relationships with the Product Owner, business team, customer needs, and other stakeholders to ensure a clear and seamless product development process with best practices and user-centred design processes."
+    bullets: [
+      "Led a 20+ person engineering team in Agile development",
+      "Facilitated relationships with the Product Owner, business team, customer needs, and other stakeholders to ensure a clear and seamless product development process with best practices and user-centred design processes",
+    ]
   },
   {
     year: "2011–2022",
-    title: "Senior Product Designer / Senior UX/UI Designer / Front-End Developer",
+    title: "Senior Product Designer / Front-End Developer",
     company: "Edsby",
-    description:
-      "Designed and implemented user interfaces of the software to create an easy and pleasant user experience, taking into account market research, user testing, customer needs, and business requirements to iterate through designs for the most effective solutions. Collaborated with the engineering team to ensure implementation of designs and seamless product deployment. Designed, created, and maintained all public-facing marketing materials across different media."
+    bullets: [
+      "Developed UI elements and prototypes for mobile/web applications",
+      "Constructed wireframes, user flows, low-and high-fidelity mockups, and prototypes for new and existing products and features",
+      "Conducted market research and user testing/interviews to iterate through designs for the most effective solutions",
+      "Collaborated with the engineering team to ensure implementation of designs and seamless product deployment",
+      "Designed, created, and maintained all public-facing marketing materials across different media",       
+      ]
   },
   {
     year: "2010–2011",
     title: "Graphic and Web Designer / Front-End Web Developer",
     company: "Ingle International",
-    description:
-      "Designed and developed websites for clients, created intuitive user interfaces for web applications, and worked closely with programmers to achieve optimal functionality. Created other materials for the company and its clients, such as interactive flash presentations and print materials."
+    bullets: [
+      "Designed and developed websites for clients",
+      "Created intuitive user interfaces for web applications",
+      "Worked closely with programmers to achieve optimal functionality",
+      "Created other materials for the company and its clients, such as interactive flash presentations and print materials"
+    ]
   },
-  {
-    year: "2008–2011",
-    title: "Web Designer and Technician",
-    company: "York University",
-    description:
-      "Maintained the web sites for the Fine Arts Computing department and Visual Resources Centre. Assisted faculty with technical problems such as setting up new computers and equipment, troubleshot more complicated issues to relay the information to the next level of support."
-  },
+  // {
+  //   year: "2008–2011",
+  //   title: "Web Designer and Technician",
+  //   company: "York University",
+  //   description:
+  //     "Maintained the web sites for the Fine Arts Computing department and Visual Resources Centre. Assisted faculty with technical problems such as setting up new computers and equipment, troubleshot more complicated issues to relay the information to the next level of support.",
+  // },
 ]
 
 const IndexPage = ({ data }) => {
@@ -88,9 +104,17 @@ const IndexPage = ({ data }) => {
               <div className="right w-full md:w-5/6 ">
                   <div className="title font-semibold text-pink-600">{resumeItem.title}</div>
                   <div className="company text-slate-300 mb-3">{resumeItem.company}</div>
-                  <div className="description text-base  mb-5">
-                    {resumeItem.description}
-                  </div>
+                  <div className="description text-sm  mb-5">
+                    {resumeItem.description} 
+                    <ul className="list-disc ml-4">
+                    {resumeItem.bullets.map((resumeBullet,index) => (
+                        <li key={index}>{resumeBullet}</li>
+                    )
+                      )
+                    }
+                    </ul>
+                 
+                      </div>
               </div>
           </div>
         ))}
