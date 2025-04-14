@@ -1,20 +1,24 @@
 import * as React from "react";
 import Layout from "../components/layout";
-import { StaticImage } from "gatsby-plugin-image";
+import {
+  StaticImage
+} from "gatsby-plugin-image";
 import resumePDF from "./AnnaKlibanovResume.pdf";
 import GatsbyConfig from "../../gatsby-config";
 
-const resume = [
-  {
+const resume = [{
     startyear: "Nov 2023",
     endyear: "Present",
     title: "Lead Product Designer",
     company: "Texada",
     bullets: [
-      "Manage a design team across multiple products to deliver a consistent and seamless user experience through low-and high-fidelity wireframes, mockups, and prototypes",
-      "Collaborate with cross-functional teams and product managers during product roadmap planning to create products that users love",
-      "Work closely with engineering teams on the effective execution of designs",
-      "Conduct user research and usability testing to better understand user journeys and iterate on designs",
+      "Manage and mentor a multi-product design team, ensuring consistent UX through scalable patterns and a shared design system.",
+      "Develop and implement a cross-product design system across multiple tech stacks and frameworks.",
+      "Lead the UX vision for a significant product redesign, integrating stakeholder feedback and legacy system constraints into a modern, intuitive interface.",
+      "Help innovate, research, and introduce AI features into core user workflows, significantly increasing productivity in everyday tasks.",
+      "Introduced UX practices into the SDLC from the ground up, establishing structured research and validation loops.",
+      "Collaborated with product and engineering to embed design at every stage of the development process and reduced rework during implementation.",
+      "Partner cross-functionally with engineering and product leadership to define roadmap and OKRs."
     ],
   },
   {
@@ -84,157 +88,184 @@ const resume = [
   // },
 ];
 
-const IndexPage = ({ data }) => {
-  return (
-    <Layout pageTitle="home">
-      <div className="pt-10">
-        <div className="h-60">
-          <StaticImage
-            src="../images/profile.jpg"
-            alt="Anna Klibanov headshot"
-            className="h-full w-full "
-            imgClassName="rounded-full"
-            objectFit="contain"
-            placeholder="none"
-            imgStyle={{
-              width: "auto",
-              margin: "0 auto",
-            }}
-          />
-        </div>
-        <h1 className="my-4 text-5xl font-bold leading-tight">Hi, I'm Anna</h1>
-        <p className="leading-normal text-xl mb-8">
-          Over the last 15 years, I've worked across diverse industries
-          designing and building software. My most scaled work was at Edsby, an
-          education platform servicing over 215 million users worldwide and
-          winning more than 70 awards. My passion lies in crafting functional
-          and user-centric products, where I meticulously consider both
-          high-level perspectives and minute details. My skill set, spanning
-          creative, practical, and technical domains, gives me a unique approach
-          to product design and management. I'm creative, adaptive, and love to
-          learn. I am motivated by a challenge and love the reward of overcoming
-          obstacles.
-        </p>
-      </div>
-      <section className="py-5" id="resume">
-        <h2 className="w-full my-2 mb-8 text-3xl font-bold">Work Experience</h2>
-        <div className="w-full  flex flex-col flex-grow flex-shrink">
-          {resume.map((resumeItem) => (
-            <div
-              className="resume-item mb-8 flex-1 flex flex-wrap"
-              key={resumeItem.title}
-            >
-              <div className="date w-1/6 min-w-[110px]  text-slate-400">
-                <div className="startyear">{resumeItem.startyear}–</div>
-                <div className="endyear">{resumeItem.endyear}</div>
-              </div>
-              <div className="right w-full md:w-5/6 ">
-                <div className="title font-semibold text-pink-600">
-                  {resumeItem.title}
-                </div>
-                <div className="company text-slate-300 mb-3">
-                  {resumeItem.company}
-                </div>
-                <div className="description text-sm  mb-5">
-                  {resumeItem.description}
-                  <ul className="list-disc ml-4">
-                    {resumeItem.bullets.map((resumeBullet, index) => (
-                      <li key={index}>{resumeBullet}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-      <section className="py-5" id="skills">
-        <div className="container text-base mx-auto pt-4 pb-12 text-xl">
-          <h2 className="w-full my-2 mb-8 text-3xl font-bold">Skills</h2>
-          <div className="md:flex justify-between w-full">
-            <ul className="list-disc ml-[20px] leading-loose">
-              <li>Product design</li>
-              <li>UX/UI design</li>
-              <li>User research and testing</li>
-              <li>Wireframing and prototyping</li>
-              <li>Design systems</li>
-              <li>Web development</li>
-              <li>Branding</li>
-              <li>Project management</li>
-            </ul>
-            <ul className="list-disc ml-[20px] leading-loose">
-              <li>Agile (Scrum) methodologies</li>
-              <li>Team leadership</li>
-              <li>Verbal, written, and interpersonal communication</li>
-              <li>Adobe Creative Suite</li>
-              <li>Figma</li>
-              <li>MS Visual Studio</li>
-              <li>HTML/CSS</li>
-              <li>Javascript</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section className="py-5 contact">
-        <div className="container mx-auto pt-4 pb-12 text-xl">
-          <h2 className="w-full my-2 mb-8 text-3xl font-bold">Contact</h2>
-          <p className="leading-normal mb-6">
-            I'm currently considering opportunities as a Product Designer or if
-            my skillset matches the missing puzzle piece to your project I'm
-            available for freelance work.
-          </p>
-          <a
-            href="mailto:hithere@gobanana.ca"
-            className="block text-slate-400 hover:underline hover:text-pink-600"
-          >
-            hithere@gobanana.ca
-          </a>
-          <span className="">@gobanana66</span> on{" "}
-          <a
-            href="https://twitter.com/gobanana66"
-            target="_blank"
-            rel="noreferrer"
-            className="text-slate-400 hover:underline hover:text-pink-600"
-          >
-            Twitter
-          </a>
-          ,{" "}
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://dribbble.com/gobanana66"
-            className="text-slate-400 hover:underline hover:text-pink-600"
-          >
-            Dribbble
-          </a>
-          ,{" "}
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/gobanana66"
-            className="text-slate-400 hover:underline hover:text-pink-600"
-          >
-            GitHub
-          </a>
-          <a
-            href={resumePDF}
-            target="_blank"
-            rel="noreferrer"
-            className="block w-fit bg-pink-600 hover:bg-blue-700 text-white text-sm mt-10 py-2 px-4 rounded-full"
-          >
-            Download Resume
-          </a>
-        </div>
-      </section>
-    </Layout>
+const IndexPage = ({
+  data
+}) => {
+  return ( <
+    Layout pageTitle = "home" >
+    <
+    div className = "pt-10" >
+    <
+    div className = "h-60" >
+    <
+    StaticImage src = "../images/profile.jpg"
+    alt = "Anna Klibanov headshot"
+    className = "h-full w-full "
+    imgClassName = "rounded-full"
+    objectFit = "contain"
+    placeholder = "none"
+    imgStyle = {
+      {
+        width: "auto",
+        margin: "0 auto",
+      }
+    }
+    /> <
+    /div> <
+    h1 className = "my-4 text-5xl font-bold leading-tight" > Hi, I 'm Anna</h1> <
+    p className = "leading-normal text-xl mb-8" >
+    Over the last 15 years, I 've worked across diverse industries
+    designing and building software.My most scaled work was at Edsby, an education platform servicing over 215 million users worldwide and winning more than 70 awards.My passion lies in crafting functional and user - centric products, where I meticulously consider both high - level perspectives and minute details.My skill set, spanning creative, practical, and technical domains, gives me a unique approach to product design and management.I 'm creative, adaptive, and love to
+    learn.I am motivated by a challenge and love the reward of overcoming obstacles. <
+    /p> <
+    /div> <
+    section className = "py-5"
+    id = "resume" >
+    <
+    h2 className = "w-full my-2 mb-8 text-3xl font-bold" > Work Experience < /h2> <
+    div className = "w-full  flex flex-col flex-grow flex-shrink" > {
+      resume.map((resumeItem) => ( <
+        div className = "resume-item mb-8 flex-1 flex flex-wrap"
+        key = {
+          resumeItem.title
+        } >
+        <
+        div className = "date w-1/6 min-w-[110px]  text-slate-400" >
+        <
+        div className = "startyear" > {
+          resumeItem.startyear
+        }– < /div> <
+        div className = "endyear" > {
+          resumeItem.endyear
+        } < /div> <
+        /div> <
+        div className = "right w-full md:w-5/6 " >
+        <
+        div className = "title font-semibold text-pink-600" > {
+          resumeItem.title
+        } <
+        /div> <
+        div className = "company text-slate-300 mb-3" > {
+          resumeItem.company
+        } <
+        /div> <
+        div className = "description text-sm  mb-5" > {
+          resumeItem.description
+        } <
+        ul className = "list-disc ml-4" > {
+          resumeItem.bullets.map((resumeBullet, index) => ( <
+            li key = {
+              index
+            } > {
+              resumeBullet
+            } < /li>
+          ))
+        } <
+        /ul> <
+        /div> <
+        /div> <
+        /div>
+      ))
+    } <
+    /div> <
+    /section> <
+    section className = "py-5"
+    id = "skills" >
+    <
+    div className = "container text-base mx-auto pt-4 pb-12 text-xl" >
+    <
+    h2 className = "w-full my-2 mb-8 text-3xl font-bold" > Skills < /h2> <
+    div className = "md:flex justify-between w-full" >
+    <
+    ul className = "list-disc ml-[20px] leading-loose" >
+    <
+    li > Product design < /li> <
+    li > UX / UI design < /li> <
+    li > User research and testing < /li> <
+    li > Wireframing and prototyping < /li> <
+    li > Design systems < /li> <
+    li > Web development < /li> <
+    li > Branding < /li> <
+    li > Project management < /li> <
+    /ul> <
+    ul className = "list-disc ml-[20px] leading-loose" >
+    <
+    li > Agile(Scrum) methodologies < /li> <
+    li > Team leadership < /li> <
+    li > Verbal, written, and interpersonal communication < /li> <
+    li > Adobe Creative Suite < /li> <
+    li > Figma < /li> <
+    li > MS Visual Studio < /li> <
+    li > HTML / CSS < /li> <
+    li > Javascript < /li> <
+    /ul> <
+    /div> <
+    /div> <
+    /section> <
+    section className = "py-5 contact" >
+    <
+    div className = "container mx-auto pt-4 pb-12 text-xl" >
+    <
+    h2 className = "w-full my-2 mb-8 text-3xl font-bold" > Contact < /h2> <
+    p className = "leading-normal mb-6" >
+    I 'm currently considering opportunities as a Product Designer or if
+    my skillset matches the missing puzzle piece to your project I 'm
+    available
+    for freelance work. <
+    /p> <
+    a href = "mailto:hithere@gobanana.ca"
+    className = "block text-slate-400 hover:underline hover:text-pink-600" >
+    hithere @gobanana.ca <
+    /a> <
+    span className = "" > @gobanana66 < /span> on{" "} <
+    a href = "https://twitter.com/gobanana66"
+    target = "_blank"
+    rel = "noreferrer"
+    className = "text-slate-400 hover:underline hover:text-pink-600" >
+    Twitter <
+    /a>, {
+      " "
+    } <
+    a target = "_blank"
+    rel = "noreferrer"
+    href = "https://dribbble.com/gobanana66"
+    className = "text-slate-400 hover:underline hover:text-pink-600" >
+    Dribbble <
+    /a>, {
+      " "
+    } <
+    a target = "_blank"
+    rel = "noreferrer"
+    href = "https://github.com/gobanana66"
+    className = "text-slate-400 hover:underline hover:text-pink-600" >
+    GitHub <
+    /a> <
+    a href = {
+      resumePDF
+    }
+    target = "_blank"
+    rel = "noreferrer"
+    className = "block w-fit bg-pink-600 hover:bg-blue-700 text-white text-sm mt-10 py-2 px-4 rounded-full" >
+    Download Resume <
+    /a> <
+    /div> <
+    /section> <
+    /Layout>
   );
 };
 
 export default IndexPage;
 
-export const Head = () => (
-  <>
-    <title>{GatsbyConfig.siteMetadata.title}</title>
-    <meta name="description" content={GatsbyConfig.siteMetadata.description} />
-  </>
+export const Head = () => ( <
+  >
+  <
+  title > {
+    GatsbyConfig.siteMetadata.title
+  } < /title> <
+  meta name = "description"
+  content = {
+    GatsbyConfig.siteMetadata.description
+  }
+  /> <
+  />
 );
