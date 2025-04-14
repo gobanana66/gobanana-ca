@@ -107,7 +107,7 @@ const IndexPage = ({ data }) => {
         </div> */}
         <h1 className="my-4 text-5xl font-bold leading-tight">Hi, I'm Anna Klibanov</h1>
         <p className="leading-normal text-xl mb-8">
-        Over the last 15 years, I’ve designed and built software across diverse industries with a strong focus on user research, usability, and developer tools. I specialize in end-to-end product design, from discovery to delivery, using Figma, iterative prototyping, and structured SDLC integration. I’ve led UX strategy and implementation for platforms supporting DevSecOps, CI/CD pipelines, and AI-powered user workflows. My experience spans creating design systems, scaling team processes, and collaborating cross-functionally with product and engineering to ship intuitive, secure, and high-impact solutions. I thrive in asynchronous, remote-first environments and am passionate about solving complex problems through user-centered design and agile product thinking.
+        Over the last 15 years, I’ve designed and built software across industries ranging from education to infrastructure to open-source development. My expertise spans the full product design lifecycle—from discovery and user research to prototyping and delivery. I’m passionate about creating intuitive, impactful experiences that serve real user needs and business goals. I’ve led design strategy, developed scalable design systems, and embedded UX into the SDLC to elevate product quality and collaboration. I thrive in remote-first teams and love solving complex challenges through thoughtful, user-centered design.
         </p>
       </div>
       <section className="py-5" id="resume">
