@@ -157,7 +157,7 @@ const IndexPage = ({ data }) => {
           <h2 className="w-full my-2 mb-8 text-3xl font-bold">Education</h2>
           <div className="w-full">
               <p className="mb-3"><span className="font-bold text-cyan-400">Certified ScrumMaster (CSM)</span> Scrum Alliance | 2020</p>
-              <p className="mb-3"><span className="font-bold text-cyan-400">Bachelor of Design (Honours)</span>York University / Sheridan College | 2006–2010</p>
+              <p className="mb-3"><span className="font-bold text-cyan-400">Bachelor of Design (Honours)</span> York University / Sheridan College | 2006–2010</p>
           </div>
         </div>
       </section>
