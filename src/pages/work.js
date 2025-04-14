@@ -5,6 +5,7 @@ import { GatsbyImage } from "gatsby-plugin-image"
 import JSONData from "../data/portfolioData.json"
 
 
+
 const PortfolioPage = ({ data }) => {
   // Memoized image lookup object
   const imageCache = React.useMemo(() => {
@@ -23,9 +24,15 @@ const PortfolioPage = ({ data }) => {
   }
 
   return (
-    <Layout pageTitle="portfolio">
+    <Layout pageTitle="Featured Work">
+      <section id="hero"><div className="pt-10 text-center">
+        <h1 className="my-4 text-5xl font-bold leading-tight">Designing thoughtful, scalable experiences that make complex products feel simple.</h1>
+        <p className="leading-normal text-xl mb-8">
+        With over 15 years of experience, I specialize in end-to-end product design—leading strategy, research, and systems thinking to craft intuitive software that solves real problems. I thrive in cross-functional, remote-first teams and bring UX into every stage of the development lifecycle to elevate quality and collaboration.
+        </p>
+      </div></section>
       <section className="py-5 portfolio">
-        <h2 className="w-full my-2 mb-8 text-3xl font-bold">Portfolio</h2>
+        <h2 className="w-full my-2 mb-8 text-3xl font-bold text-center">Featured Work</h2>
         <div className="w-full flex flex-col gap-9">
           {JSONData.map((item, index) => {
             const imageData = getImagePath(item.title)
@@ -69,7 +76,7 @@ const PortfolioPage = ({ data }) => {
                     </div>
                   )}
   
-                  <div className="description mb-2">{item.description}</div>
+                  <div className="summary mb-2">{item.summary}</div>
   
                   {item.liveURL && (
                     <a
@@ -116,7 +123,3 @@ export const query = graphql`
 `
 
 export default PortfolioPage
-
-export const Head = () => (
-  <title>Portfolio - Anna Klibanov - Product Designer / Front-End Web Developer</title>
-)

@@ -1,0 +1,44 @@
+.browser-window {
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #3a3a3a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .browser-window  .top-bar {
+    background: #3a3a3a;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .browser-window .circles {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .browser-window .circle {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .browser-window .circle.red {
+    background-color: #ff5f57;
+  }
+  
+  .browser-window .circle.yellow {
+    background-color: #ffbd2e;
+  }
+  
+  .browser-window .circle.green {
+    background-color: #28c840;
+  }
+  
+  .browser-window .content {
+    background: #3a3a3a;
+  }
+  
