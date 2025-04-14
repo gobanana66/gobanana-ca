@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-    background-color: rgb(15 23 42);
+    background-color: rgb(0 36 45);
 }
 
 
@@ -40,8 +40,13 @@ nav li a:hover {
 }
 
 nav li a[aria-current] {
-    border-bottom:3px solid rgb(219 39 119 / var(--tw-text-opacity));
+    border-bottom:3px solid rgb(8 145 178);
     opacity: 1;
+}
+
+.startyear,
+.endyear {
+    opacity: 0.8;
 }
 
 

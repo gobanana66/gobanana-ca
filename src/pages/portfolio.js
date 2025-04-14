@@ -30,7 +30,7 @@ const PortfolioPage = ({ data }) => {
                 imgClassName="rounded-md"
                 placeholder="blurred"
                 objectPosition={"top"} /></a>
-              <div className="title font-semibold text-pink-600 text-xl mt-4"><a target="_blank" rel="noreferrer" title={item.title} href={item.liveURL ? item.liveURL: item.github } className="hover:underline">{item.title}</a></div>
+              <div className="title font-semibold text-cyan-400 text-xl mt-4"><a target="_blank" rel="noreferrer" title={item.title} href={item.liveURL ? item.liveURL: item.github } className="hover:underline">{item.title}</a></div>
                 <div className="tags flex flex-wrap gap-2 mt-2 mb-5 text-xs">
                   {item.tags && item.tags.map(tag => (
                     <span key={tag} className={"tag tag-" + tag} > { tag }</span>
@@ -39,9 +39,9 @@ const PortfolioPage = ({ data }) => {
                 <div className="description mb-2">
                   {item.description}
                 </div>
-                {item.liveURL && <a href={item.liveURL} target="_blank" rel="noreferrer" className="link text-pink-600 hover:underline mb-3">View Live</a>}
+                {item.liveURL && <a href={item.liveURL} target="_blank" rel="noreferrer" className="link text-cyan-400 hover:underline mb-3">View Live</a>}
                 {(item.liveURL && item.github) && <span className="sep"> · </span>}
-                {item.github && <a href={item.github} target="_blank" rel="noreferrer" className="link text-pink-600 hover:underline mb-3">GitHub</a>}
+                {item.github && <a href={item.github} target="_blank" rel="noreferrer" className="link text-cyan-400 hover:underline mb-3">GitHub</a>}
               
               </div>
           }
