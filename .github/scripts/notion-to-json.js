@@ -75,7 +75,7 @@ async function fetchNotionData() {
   });
 
   fs.writeFileSync(
-    "src/data/portfolioData.json",
+    "./src/data/portfolioData.json",
     JSON.stringify(formatted, null, 2)
   );
 }
