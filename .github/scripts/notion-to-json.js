@@ -78,10 +78,46 @@ async function fetchNotionData() {
         };
     });
 
+<<<<<<< HEAD
     fs.writeFileSync(
         "./src/data/portfolioData.json",
         JSON.stringify(formatted, null, 2)
     );
+=======
+    pages.push(...response.results);
+
+    if (!response.has_more) break;
+    cursor = response.next_cursor;
+  }
+
+  const formatted = pages.map((page) => {
+    const props = page.properties;
+
+    const title = getText(props["title"]?.title);
+    const summary = getText(props["summary"]?.rich_text);
+    const overview = getText(props["overview"]?.rich_text);
+    const tags = getTags(props["tags"]?.multi_select);
+    const impact = getText(props["impact"]?.rich_text);
+    const problem = getText(props["problem"]?.rich_text);
+    const solution = getText(props["solution"]?.rich_text);
+
+    return {
+      title,
+      summary,
+      overview,
+      tags,
+      impact: convertToHtmlList(impact),
+      problem: convertToHtmlList(problem),
+      solution: convertToHtmlList(solution),
+      slug: slugify(title),
+    };
+  });
+
+  fs.writeFileSync(
+    "./src/data/portfolioData.json",
+    JSON.stringify(formatted, null, 2)
+  );
+>>>>>>> 3a2c77a (update script)
 }
 
 fetchNotionData();
