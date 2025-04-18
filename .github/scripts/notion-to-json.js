@@ -1,68 +1,83 @@
-const fs = require("fs")
-const { Client } = require("@notionhq/client")
+const fs = require("fs");
+const { Client } = require("@notionhq/client");
 
-const notion = new Client({ auth: process.env.NOTION_TOKEN })
-const databaseId = process.env.NOTION_DATABASE_ID
+const notion = new Client({ auth: process.env.NOTION_TOKEN });
+const databaseId = process.env.NOTION_DATABASE_ID;
 
+// Utility to convert title to slug
 const slugify = (text) => {
   return text
     .toLowerCase()
-    .replace(/\s+/g, '-') // Replace spaces with hyphens
-    .replace(/[^\w\-]+/g, '') // Remove all non-word chars
-    .replace(/\-\-+/g, '-') // Replace multiple hyphens with a single hyphen
-    .trim(); // Trim hyphens from start and end
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-")
+    .replace(/^-+|-+$/g, "");
 };
 
-// Convert tags string to an array
-const tagsArray = (inputData.tags || '').split(',').map(tag => tag.trim());
-
-// Function to convert bullet list strings to HTML
+// Convert bullet list strings to HTML
 const convertToHtmlList = (text) => {
-  const items = text.split('\n').map(item => item.replace(/•\s*/, '').trim()).filter(Boolean);
-  return `<ul>${items.map(item => `<li>${item}</li>`).join('')}</ul>`;
+  const items = text
+    .split("\n")
+    .map((item) => item.replace(/•\s*/, "").trim())
+    .filter(Boolean);
+  return `<ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
 };
 
-// Convert impact, problem, and solution to HTML lists
-const impactHtml = convertToHtmlList(inputData.impact || '');
-const problemHtml = convertToHtmlList(inputData.problem || '');
-const solutionHtml = convertToHtmlList(inputData.solution || '');
+// Safely extract plain text from rich_text property
+const getText = (field) =>
+  field?.[0]?.plain_text || "";
+
+// Safely extract multi-select values
+const getTags = (field) =>
+  Array.isArray(field) ? field.map((tag) => tag.name) : [];
 
 async function fetchNotionData() {
-  const pages = []
-  let cursor = undefined
+  const pages = [];
+  let cursor = undefined;
 
   while (true) {
     const response = await notion.databases.query({
       database_id: databaseId,
       start_cursor: cursor,
-    })
+    });
 
-    pages.push(...response.results)
+    pages.push(...response.results);
 
-    if (!response.has_more) break
-    cursor = response.next_cursor
+    if (!response.has_more) break;
+    cursor = response.next_cursor;
   }
 
   const formatted = pages.map((page) => {
-    const inputData = page.properties
-    // Prepare the final output object
-    output = {
-      title: inputData.title || '',
-      summary: inputData.summary || '',
-      overview: inputData.overview || '',
-      tags: tagsArray,
-      impact: impactHtml,
-      problem: problemHtml,
-      solution: solutionHtml,
-      slug: slug,
+    const props = page.properties;
+
+    const title = getText(props["Title"]?.title);
+    const summary = getText(props["Summary"]?.rich_text);
+    const overview = getText(props["Overview"]?.rich_text);
+    const impact = getText(props["Impact"]?.rich_text);
+    const problem = getText(props["Problem"]?.rich_text);
+    const solution = getText(props["Solution"]?.rich_text);
+    const tags = getTags(props["Tags"]?.multi_select);
+    const liveURL = props["Live URL"]?.url || "";
+    const github = props["GitHub"]?.url || "";
+
+    return {
+      title,
+      summary,
+      overview,
+      tags,
+      impact: convertToHtmlList(impact),
+      problem: convertToHtmlList(problem),
+      solution: convertToHtmlList(solution),
+      liveURL,
+      github,
+      slug: slugify(title),
     };
+  });
 
-    return output;
-  })
-
-  fs.writeFileSync("src/data/portfolioData.json", JSON.stringify(formatted, null, 2))
+  fs.writeFileSync(
+    "src/data/portfolioData.json",
+    JSON.stringify(formatted, null, 2)
+  );
 }
 
-
-
-fetchNotionData()
+fetchNotionData();
