@@ -50,15 +50,13 @@ async function fetchNotionData() {
   const formatted = pages.map((page) => {
     const props = page.properties;
 
-    const title = getText(props["Title"]?.title);
-    const summary = getText(props["Summary"]?.rich_text);
-    const overview = getText(props["Overview"]?.rich_text);
-    const impact = getText(props["Impact"]?.rich_text);
-    const problem = getText(props["Problem"]?.rich_text);
-    const solution = getText(props["Solution"]?.rich_text);
-    const tags = getTags(props["Tags"]?.multi_select);
-    const liveURL = props["Live URL"]?.url || "";
-    const github = props["GitHub"]?.url || "";
+    const title = getText(props["title"]?.title);
+    const summary = getText(props["summary"]?.rich_text);
+    const overview = getText(props["overview"]?.rich_text);
+    const tags = getTags(props["tags"]?.multi_select);
+    const impact = getText(props["impact"]?.rich_text);
+    const problem = getText(props["problem"]?.rich_text);
+    const solution = getText(props["solution"]?.rich_text);
 
     return {
       title,
@@ -68,8 +66,6 @@ async function fetchNotionData() {
       impact: convertToHtmlList(impact),
       problem: convertToHtmlList(problem),
       solution: convertToHtmlList(solution),
-      liveURL,
-      github,
       slug: slugify(title),
     };
   });
