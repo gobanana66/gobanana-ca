@@ -1,5 +1,7 @@
 const fs = require("fs");
 const { Client } = require("@notionhq/client");
+require("dotenv").config();
+
 
 const notion = new Client({ auth: process.env.NOTION_TOKEN });
 const databaseId = process.env.NOTION_DATABASE_ID;
@@ -20,7 +22,11 @@ const convertToHtmlList = (text) => {
     .split("\n")
     .map((item) => item.replace(/•\s*/, "").trim())
     .filter(Boolean);
-  return `<ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+  if(items.length > 1) {
+    return `<ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
+  } else {
+    return(items);
+  }
 };
 
 // Safely extract plain text from rich_text property

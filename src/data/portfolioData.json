@@ -1,62 +1,87 @@
 [
   {
-    "title": "",
-    "summary": "",
-    "overview": "",
-    "tags": [],
-    "impact": "<ul></ul>",
-    "problem": "<ul></ul>",
-    "solution": "<ul></ul>",
-    "liveURL": "",
-    "github": "",
-    "slug": ""
+    "title": "Analytics Dashboard Redesign",
+    "summary": "Redesigned Edsby's analytics dashboard to improve clarity, accessibility, and adoption among educators.",
+    "overview": "Reimagined the analytics dashboard for educators managing student data at scale. Focused on accessibility, intuitive workflows, and visual clarity across multiple data points.",
+    "tags": [
+      "UX",
+      "Education",
+      "Dashboard",
+      "Accessibility"
+    ],
+    "impact": [
+      "Improved dashboard adoption by 25% and received positive feedback from school administrators."
+    ],
+    "problem": [],
+    "solution": [],
+    "slug": "analytics-dashboard-redesign"
   },
   {
-    "title": "",
-    "summary": "",
-    "overview": "",
-    "tags": [],
-    "impact": "<ul></ul>",
-    "problem": "<ul></ul>",
-    "solution": "<ul></ul>",
-    "liveURL": "",
-    "github": "",
-    "slug": ""
+    "title": "UX Integration into the SDLC",
+    "summary": "Embedded UX into Texada’s SDLC to reduce rework by 15% and increase team velocity.",
+    "overview": "Established UX design as a formal part of the software development lifecycle. Introduced validation loops, UX checkpoints, and documentation standards to reduce back-and-forth with engineering.",
+    "tags": [
+      "UX",
+      "Process",
+      "Strategy",
+      "Collaboration"
+    ],
+    "impact": [
+      "Reduced rework by 15% and improved alignment across teams during sprint execution."
+    ],
+    "problem": [],
+    "solution": [],
+    "slug": "ux-integration-into-the-sdlc"
   },
   {
-    "title": "",
-    "summary": "",
-    "overview": "",
-    "tags": [],
-    "impact": "<ul></ul>",
-    "problem": "<ul></ul>",
-    "solution": "<ul></ul>",
-    "liveURL": "",
-    "github": "",
-    "slug": ""
+    "title": "Cross-Product Design System",
+    "summary": "Developed and scaled a cross-product design system, reducing dev time by 20% and improving consistency.",
+    "overview": "Created a unified design system used across multiple legacy and modern SaaS products. Reduced redundancy, sped up developer handoff, and improved UI consistency across the board.",
+    "tags": [
+      "UX",
+      "Design System",
+      "Figma",
+      "SaaS"
+    ],
+    "impact": [
+      "Reduced dev implementation time by 20%, improved component reuse and cross-product consistency."
+    ],
+    "problem": [],
+    "solution": [],
+    "slug": "cross-product-design-system"
   },
   {
-    "title": "",
-    "summary": "",
-    "overview": "",
-    "tags": [],
-    "impact": "<ul></ul>",
-    "problem": "<ul></ul>",
-    "solution": "<ul></ul>",
-    "liveURL": "",
-    "github": "",
-    "slug": ""
+    "title": "Security & Vulnerability Dashboard",
+    "summary": "Designed a clear, actionable dashboard to surface critical vulnerabilities for developers.",
+    "overview": "Redesigned a security dashboard to surface and prioritize vulnerabilities for developers using open-source packages. Made actionable data more accessible and improved team adoption.",
+    "tags": [
+      "UX",
+      "Dashboard",
+      "Security",
+      "DevTools"
+    ],
+    "impact": [
+      "Increased vulnerability engagement by 17%; faster remediation cycles."
+    ],
+    "problem": [],
+    "solution": [],
+    "slug": "security-vulnerability-dashboard"
   },
   {
-    "title": "",
-    "summary": "",
-    "overview": "",
-    "tags": [],
-    "impact": "<ul></ul>",
-    "problem": "<ul></ul>",
-    "solution": "<ul></ul>",
-    "liveURL": "",
-    "github": "",
-    "slug": ""
+    "title": "AI Workflow: Voice-to-Activity Logging",
+    "summary": "Empowered sales reps to quickly log customer meetings by speaking into their phones—no typing, no lag, just smart, seamless activity capture.",
+    "overview": "I designed a voice-to-text workflow that helps sales reps log customer activities in real time using just their mobile devices. The feature uses AI-powered speech recognition to transcribe natural language into structured data, automatically syncing with backend systems via API. This eliminated the need for tedious manual entry, making it faster and easier for reps to capture important context while it's still fresh—whether walking out of a meeting or driving to the next one. The UX focused on simplicity, speed, and accessibility to ensure it supported real-world sales behavior without adding friction.",
+    "tags": [
+      "UX",
+      "AI",
+      "SaaS",
+      "B2B"
+    ],
+    "impact": "<ul><li>Reduced average activity logging time by 60%</li><li>Increased activity logging completeness by 35%</li><li>Boosted adoption across field teams by making the tool feel like a natural extension of their workflow</li></ul>",
+    "problem": [
+      "Sales reps were consistently falling behind on logging activities. Manual input on mobile devices was time-consuming and often delayed, leading to incomplete records, lost context, and gaps in reporting."
+    ],
+    "solution": "<ul><li>Integrated voice-to-text functionality using AI speech recognition</li><li>Designed a mobile-first UX with minimal tap-to-record interactions</li><li>Parsed natural speech into structured CRM-ready fields via API</li><li>Built feedback loops to confirm and correct transcription errors quickly</li></ul>",
+    "slug": "ai-workflow-voice-to-activity-logging"
   }
 ]
