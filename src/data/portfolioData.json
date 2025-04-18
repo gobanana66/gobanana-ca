@@ -1,5 +1,4 @@
-[
-  {
+[{
     "title": "AI Workflow: Voice-to-Activity Logging",
     "summary": "Empowered sales reps to quickly log customer meetings by speaking into their phones—no typing, no lag, just smart, seamless activity capture.",
     "overview": "I designed a voice‑to‑text flow that lets busy sales reps capture customer interactions the moment they happen. Reps simply pull out their phone, speak naturally, and the AI engine converts their words into clean, structured data that sends it to the CRM over a secure API. No more typing notes in the parking lot or distracted driving, just a couple of taps and they’re on their way. Every screen is pared back to the essentials with large hit targets for the reps on the go. The experience feels fast, intuitive, and forgiving.",
