@@ -1,0 +1,55 @@
+[
+    {
+      "title": "AI-Powered Workflow Optimization",
+      "slug": "ai-workflow-texada",
+      "description": "Introduced AI-driven features to streamline repetitive workflows, improving task efficiency by 30%.",
+      "summary": "Led the design of an AI-driven quoting tool at Texada, starting with a POC during a hackathon and scaling it to production. This tool reduced quoting time by 30% and significantly improved workflow clarity.",
+      "tags": ["UX, AI, SaaS, B2B"],
+      "impact": "Reduced quoting task time by 30%; improved user satisfaction and decreased support tickets.",
+      "liveURL": "https://gobanana.ca/work/ai-workflow-texada",
+      "prototype": "https://www.figma.com/proto/ai-workflow-texada"   
+    },
+    {
+      "title": "Cross-Product Design System",
+      "slug": "design-system-texada",
+      "description": "Developed and scaled a cross-product design system, reducing dev time by 20% and improving consistency.",
+      "summary": "Created a unified design system used across multiple legacy and modern SaaS products. Reduced redundancy, sped up developer handoff, and improved UI consistency across the board.",
+      "tags": ["UX, Design System, Figma, SaaS"],
+      "impact": "Reduced dev implementation time by 20%, improved component reuse and cross-product consistency.",
+      "liveURL": "https://gobanana.ca/work/design-system-texada",
+      "prototype": "https://www.figma.com/proto/design-system-texada"   
+    },
+    {
+      "title": "Security & Vulnerability Dashboard",
+      "slug": "security-dashboard-activestate",
+      "description": "Designed a clear, actionable dashboard to surface critical vulnerabilities for developers.",
+      "summary": "Redesigned a security dashboard to surface and prioritize vulnerabilities for developers using open-source packages. Made actionable data more accessible and improved team adoption.",
+      "tags": ["UX, Dashboard, Security, DevTools"],
+      "impact": "Increased vulnerability engagement by 17%; faster remediation cycles.",
+      "liveURL": "https://gobanana.ca/work/security-dashboard-activestate",
+      "prototype": "https://www.figma.com/proto/security-dashboard"   
+    },
+    
+    {
+      "title": "Analytics Dashboard Redesign",
+      "slug": "analytics-dashboard-edsby",
+      "description": "Redesigned Edsby's analytics dashboard to improve clarity, accessibility, and adoption among educators.",
+      "summary": "Reimagined the analytics dashboard for educators managing student data at scale. Focused on accessibility, intuitive workflows, and visual clarity across multiple data points.",
+      "tags": ["UX, Education, Dashboard, Accessibility"],
+      "impact": "Improved dashboard adoption by 25% and received positive feedback from school administrators.",
+      "liveURL": "https://gobanana.ca/work/analytics-dashboard-edsby",
+      "prototype": "https://www.figma.com/proto/analytics-dashboard-edsby"   
+    },
+    
+    {
+      "title": "UX Integration into the SDLC",
+      "slug": "ux-sdlc-texada",
+      "description": "Embedded UX into Texada’s SDLC to reduce rework by 15% and increase team velocity.",
+      "summary": "Established UX design as a formal part of the software development lifecycle. Introduced validation loops, UX checkpoints, and documentation standards to reduce back-and-forth with engineering.",
+      "tags": ["UX, Process, Strategy, Collaboration"],
+      "impact": "Reduced rework by 15% and improved alignment across teams during sprint execution.",
+      "liveURL": "https://gobanana.ca/work/ux-sdlc-texada",
+      "prototype": ""   
+    }
+    
+  ]

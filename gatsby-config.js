@@ -4,7 +4,7 @@ module.exports = {
     siteUrl: `https://gobanana.ca`, 
     description: `Anna Klibanov is a Product and UX/UI Designer with a passion for crafting user-centric software by integrating creative, practical, and technical skills.`
   },
-  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp","gatsby-plugin-anchor-links", {
+  plugins: ["gatsby-plugin-postcss", "gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp","gatsby-plugin-anchor-links","gatsby-transformer-json", {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
@@ -23,5 +23,14 @@ module.exports = {
     options: {
       lang: 'en'
     }
-  }]
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: 'data',
+      path: 'src/data/', // <-- adjust to where your portfolio.json lives
+    },
+  },
+
+  ]
 };
