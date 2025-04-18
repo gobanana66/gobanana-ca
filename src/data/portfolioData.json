@@ -77,11 +77,20 @@
       "SaaS",
       "B2B"
     ],
-    "impact": "<ul><li>Reduced average activity logging time by 60%</li><li>Increased activity logging completeness by 35%</li><li>Boosted adoption across field teams by making the tool feel like a natural extension of their workflow</li></ul>",
+    "impact": [
+      "Reduced average activity logging time by 60%",
+      "Increased activity logging completeness by 35%",
+      "Boosted adoption across field teams by making the tool feel like a natural extension of their workflow"
+    ],
     "problem": [
       "Sales reps were consistently falling behind on logging activities. Manual input on mobile devices was time-consuming and often delayed, leading to incomplete records, lost context, and gaps in reporting."
     ],
-    "solution": "<ul><li>Integrated voice-to-text functionality using AI speech recognition</li><li>Designed a mobile-first UX with minimal tap-to-record interactions</li><li>Parsed natural speech into structured CRM-ready fields via API</li><li>Built feedback loops to confirm and correct transcription errors quickly</li></ul>",
+    "solution": [
+      "Integrated voice-to-text functionality using AI speech recognition",
+      "Designed a mobile-first UX with minimal tap-to-record interactions",
+      "Parsed natural speech into structured CRM-ready fields via API",
+      "Built feedback loops to confirm and correct transcription errors quickly"
+    ],
     "slug": "ai-workflow-voice-to-activity-logging"
   }
 ]
