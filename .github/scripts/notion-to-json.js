@@ -1,85 +1,137 @@
 const fs = require("fs");
-const { Client } = require("@notionhq/client");
+const {
+    Client
+} = require("@notionhq/client");
 require("dotenv").config();
 
 
-const notion = new Client({ auth: process.env.NOTION_TOKEN });
+const notion = new Client({
+    auth: process.env.NOTION_TOKEN
+});
 const databaseId = process.env.NOTION_DATABASE_ID;
 
 // Utility to convert title to slug
 const slugify = (text) => {
-  return text
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^\w\-]+/g, "")
-    .replace(/\-\-+/g, "-")
-    .replace(/^-+|-+$/g, "");
+    return text
+        .toLowerCase()
+        .replace(/\s+/g, "-")
+        .replace(/[^\w\-]+/g, "")
+        .replace(/\-\-+/g, "-")
+        .replace(/^-+|-+$/g, "");
 };
 
 const parseBulletsToArray = (text) => {
-  return text
-    .split("\n")
-    .map((item) => item.replace(/•\s*/, "").trim())
-    .filter(Boolean);
+    return text
+        .split("\n")
+        .map((item) => item.replace(/•\s*/, "").trim())
+        .filter(Boolean);
 };
 
 // Safely extract plain text from rich_text property
 const getText = (field) =>
-  field?.[0]?.plain_text || "";
+    field ? . [0] ? .plain_text || "";
 
 // Safely extract multi-select values
 const getTags = (field) =>
-  Array.isArray(field) ? field.map((tag) => tag.name) : [];
+    Array.isArray(field) ? field.map((tag) => tag.name) : [];
 
 async function fetchNotionData() {
-  const pages = [];
-  let cursor = undefined;
+    const pages = [];
+    let cursor = undefined;
 
-  while (true) {
-    const response = await notion.databases.query({
-      database_id: databaseId,
-      start_cursor: cursor,
-      sorts: [
-	    {
-	      property: "Order",
-	      direction: "ascending"
-		  }
-	  ],
+    while (true) {
+        const response = await notion.databases.query({
+            database_id: databaseId,
+            start_cursor: cursor,
+            sorts: [{
+                property: "Order",
+                direction: "ascending"
+            }],
+        });
+
+        pages.push(...response.results);
+
+        if (!response.has_more) break;
+        cursor = response.next_cursor;
+    }
+
+    const formatted = pages.map((page) => {
+        const props = page.properties;
+
+        const title = getText(props["title"] ? .title);
+        const summary = getText(props["summary"] ? .rich_text);
+        const overview = getText(props["overview"] ? .rich_text);
+        const tags = getTags(props["tags"] ? .multi_select);
+        const impact = getText(props["impact"] ? .rich_text);
+        const problem = getText(props["problem"] ? .rich_text);
+        const solution = getText(props["solution"] ? .rich_text);
+
+        return {
+            title,
+            summary,
+            overview,
+            tags,
+            impact: parseBulletsToArray(impact),
+            problem: parseBulletsToArray(problem),
+            solution: parseBulletsToArray(solution),
+            slug: slugify(title),
+        };
     });
 
-    pages.push(...response.results);
-
-    if (!response.has_more) break;
-    cursor = response.next_cursor;
-  }
-
-  const formatted = pages.map((page) => {
-    const props = page.properties;
-
-    const title = getText(props["title"]?.title);
-    const summary = getText(props["summary"]?.rich_text);
-    const overview = getText(props["overview"]?.rich_text);
-    const tags = getTags(props["tags"]?.multi_select);
-    const impact = getText(props["impact"]?.rich_text);
-    const problem = getText(props["problem"]?.rich_text);
-    const solution = getText(props["solution"]?.rich_text);
-
-    return {
-      title,
-      summary,
-      overview,
-      tags,
-      impact: parseBulletsToArray(impact),
-      problem: parseBulletsToArray(problem),
-      solution: parseBulletsToArray(solution),
-      slug: slugify(title),
-    };
-  });
-
-  fs.writeFileSync(
-    "./src/data/portfolioData.json",
-    JSON.stringify(formatted, null, 2)
-  );
+    fs.writeFileSync(
+        "./src/data/portfolioData.json",
+        JSON.stringify(formatted, null, 2)
+    );
 }
 
 fetchNotionData();
+const fs = require("fs")
+const {
+    Client
+} = require("@notionhq/client")
+
+const notion = new Client({
+    auth: process.env.NOTION_TOKEN
+})
+const databaseId = process.env.NOTION_DATABASE_ID
+
+async function fetchNotionData() {
+    const pages = []
+    let cursor = undefined
+
+    while (true) {
+        const response = await notion.databases.query({
+            database_id: databaseId,
+            start_cursor: cursor,
+        })
+
+        pages.push(...response.results)
+
+        if (!response.has_more) break
+        cursor = response.next_cursor
+    }
+
+    const formatted = pages.map((page) => {
+        const props = page.properties
+        return {
+            title: props["Title"].title[0] ? .plain_text || "",
+            description: props["Description"] ? .rich_text[0] ? .plain_text || "",
+            tags: props["Tags"] ? .multi_select ? .map((tag) => tag.name) || [],
+            liveURL: props["Live URL"] ? .url || "",
+            github: props["GitHub"] ? .url || "",
+            slug: slugify(props["Title"].title[0] ? .plain_text || ""),
+        }
+    })
+
+    fs.writeFileSync("src/data/portfolioData.json", JSON.stringify(formatted, null, 2))
+}
+
+function slugify(text) {
+    return text
+        .toLowerCase()
+        .replace(/&/g, "and")
+        .replace(/\s+/g, "-")
+        .replace(/[^\w-]/g, "")
+}
+
+fetchNotionData()
