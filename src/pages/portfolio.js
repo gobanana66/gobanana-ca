@@ -69,7 +69,7 @@ const PortfolioPage = ({ data }) => {
                     </div>
                   )}
   
-                  <div className="description mb-2">{item.description}</div>
+                  <div className="summary mb-2">{item.summary}</div>
   
                   {item.liveURL && (
                     <a

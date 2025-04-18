@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import data from "../../data/portfolioData.json"
+import Parser from 'html-react-parser';
 
 const CaseStudy = ({ params }) => {
   const item = data.find(i => i.slug === params.slug)
@@ -19,7 +20,7 @@ const CaseStudy = ({ params }) => {
     <Layout pageTitle={item.title}>
        <section className="py-5 portfolio">
        <h2 className="w-full my-2 mb-8 text-3xl font-bold">{item.title}</h2>
-      <p className="mt-4 mb-6">{item.description}</p>
+      <p className="mt-4 mb-6">{item.summary}</p>
       {item.tags && (
         <div className="mb-4 text-sm flex flex-wrap gap-2">
           {item.tags.map(tag => (
@@ -27,6 +28,16 @@ const CaseStudy = ({ params }) => {
           ))}
         </div>
       )}
+      <div className="flex flex-col gap-5">
+        <h3>Overview</h3>
+        <p>{item.overview}</p>
+        <h3>Problem</h3>
+        <p>{item.problem}</p>
+        <h3>Solution</h3>
+        <p>{item.solution}</p>
+        <h3>Impact</h3>
+        <div>{item.impact} </div>
+      </div>
       <div className="flex gap-4">
         {item.liveURL && <a href={item.liveURL} className="text-cyan-400 underline" target="_blank" rel="noreferrer">View Live</a>}
         {item.github && <a href={item.github} className="text-cyan-400 underline" target="_blank" rel="noreferrer">GitHub</a>}
