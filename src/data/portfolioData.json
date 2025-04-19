@@ -1,78 +1,68 @@
 [
   {
-    "title": "Analytics Dashboard Redesign",
-    "summary": "Redesigned Edsby's analytics dashboard to improve clarity, accessibility, and adoption among educators.",
-    "overview": "Reimagined the analytics dashboard for educators managing student data at scale. Focused on accessibility, intuitive workflows, and visual clarity across multiple data points.",
-    "tags": [
-      "UX",
-      "Education",
-      "Dashboard",
-      "Accessibility"
+    "title": "Flexible Gradebook for K–12 Classrooms",
+    "summary": "Designed a robust grading tool to simplify assessment workflows, support diverse evaluation styles, and streamline end-of-term reporting.",
+    "overview": "This gradebook was one of the most complex and impactful tools I’ve worked on, built to support K–12 educators managing assignments, assessments, and end-of-term reporting. The goal was to create a grading system that felt intuitive for daily use while offering the flexibility needed to support diverse evaluation methods, school policies, and reporting requirements.\n\nI led the end-to-end UX process, conducting deep research with teachers and school administrators to understand grading workflows, pain points, and various edge cases. We facilitated interviews, screen shares, and prototype walkthroughs to validate everything from grading scheme preferences to exemption logic and reporting behaviour.\n\nThe final product supports points-based, percentage, level-based, and rubric grading. It allows teachers to handle late submissions, exemptions, overrides, weighted categories, and multiple reporting terms. The interface was optimized for speed and clarity, supporting keyboard-first entry, bulk actions, and quick navigation, while ensuring accuracy and auditability during high-pressure periods like report card season.",
+    "tags": [],
+    "impact": "<ul><li>Enabled faster, more accurate grading with a focus on real-world teacher needs</li><li>Significantly reduced manual work during reporting periods</li><li>Supported flexibility across districts and classroom types without sacrificing usability</li><li>Became a cornerstone feature of the platform for both daily assessments and high-stakes reporting</li></ul>",
+    "problem": [
+      "Teachers were juggling inconsistent grading practices and time-consuming workflows using tools that were either too simplistic or too rigid. This made day-to-day assessment management difficult and often created friction during report card periods when accuracy and efficiency were critical."
     ],
-    "impact": [
-      "Improved dashboard adoption by 25% and received positive feedback from school administrators."
-    ],
-    "problem": [],
-    "solution": [],
-    "slug": "analytics-dashboard-redesign"
+    "solution": "<ul><li>Designed a comprehensive gradebook tailored to K–12 needs from the ground up</li><li>Conducted extensive UX research with educators to uncover nuanced grading practices and edge cases</li><li>Supported a range of grading schemes: points, levels, percentages, rubrics</li><li>Built time-saving features like bulk edit, smart entry defaults, and inline overrides</li><li>Ensured data integrity for downstream use in report card generation and school-wide reporting</li></ul>",
+    "slug": "flexible-gradebook-for-k12-classrooms"
   },
   {
     "title": "UX Integration into the SDLC",
-    "summary": "Embedded UX into Texada’s SDLC to reduce rework by 15% and increase team velocity.",
-    "overview": "Established UX design as a formal part of the software development lifecycle. Introduced validation loops, UX checkpoints, and documentation standards to reduce back-and-forth with engineering.",
+    "summary": "Led a process initiative to integrate UX seamlessly into every stage of the SDLC, improving collaboration, reducing rework, and elevating product quality across teams.",
+    "overview": "This initiative wasn’t about tweaking a screen or updating a flow — it was about changing how UX showed up in the product development process. As Lead UX Designer, I worked closely with my design team as well as PMs, engineers, and QA to take a hard look at how design was (or wasn’t) being integrated across the SDLC, to identify gaps in our process and opportunities for better integration.\n\nToo often, UX was brought in late, after key decisions had already been made. That meant we were solving the wrong problems, rushing through handoffs, or seeing avoidable issues pop up during development. To change that, I wanted to ensure we were embedding UX earlier — joining discovery meetings, helping shape ideas from the start, validating concepts with stakeholders and users before development, and staying involved through sprint planning, standups, and handoff reviews. I introduced a dedicated UX Jira board to track design work, priorities, and promote iterative feedback between teams.\n\nOne of the biggest wins was adding a UX QA step at the end of the process. This gave us a chance to make sure what got built matched what was designed, followed our design system, and felt consistent with the rest of the product.\n\nAll of this helped us reduce rework, ship better experiences, and build stronger relationships across teams. More importantly, it helped shift the perception of UX — from a support role to a strategic partner at the table from day one.\n\n",
     "tags": [
-      "UX",
       "Process",
       "Strategy",
       "Collaboration"
     ],
-    "impact": [
-      "Reduced rework by 15% and improved alignment across teams during sprint execution."
+    "impact": "<ul><li>Improved alignment between product, design, and engineering teams</li><li>Reduced design-related rework by catching issues early and validating before development</li><li>Elevated the role of UX as a strategic, consistent partner in the development process</li><li>Established scalable workflows now adopted across multiple teams and product lines</li></ul>",
+    "problem": [
+      "UX involvement in the product lifecycle was inconsistent and reactive. Designs were often delivered too late to influence outcomes, leading to rushed implementation, preventable bugs, and a disconnect between design and build."
     ],
-    "problem": [],
-    "solution": [],
+    "solution": "<ul><li>Facilitated discovery sessions with PMs, engineers, and design team to map current gaps</li><li>Introduced structured UX checkpoints at each SDLC phase—from discovery to post-dev QA</li><li>Rolled out a dedicated UX Jira board to manage visibility, feedback, and iterative design work</li><li>Ensured UX participation in sprint planning, dev check-ins, and handoff sessions</li><li>Formalized a UX QA process to ensure built features match design intent and system standards</li></ul>",
     "slug": "ux-integration-into-the-sdlc"
   },
   {
-    "title": "Cross-Product Design System",
-    "summary": "Developed and scaled a cross-product design system, reducing dev time by 20% and improving consistency.",
-    "overview": "Created a unified design system used across multiple legacy and modern SaaS products. Reduced redundancy, sped up developer handoff, and improved UI consistency across the board.",
+    "title": "Service Agreement Quoting (SAQ) Tool Redesign",
+    "summary": "Transformed a manual, error-prone quoting process into a scalable digital tool that empowers sales reps to quote preventative maintenance for entire fleets in minutes.",
+    "overview": "I led the redesign and development of the Service Agreement Quoting (SAQ) application—a tool that enables heavy equipment dealers to quote preventative maintenance services for multiple machines at once. Before SAQ, sales reps relied on Excel to manually build one-off quotes per machine, leading to wasted time, pricing inconsistencies, and a high risk of human error.\n\nTo truly modernize this process, we conducted extensive UX research in close partnership with a key dealership customer. This involved shadowing sales reps, mapping out their quoting workflows, and identifying edge cases that surfaced during real quoting scenarios. We facilitated multiple working sessions to unpack the nuanced requirements of contract structures, machine-specific pricing logic, and dealer-specific business rules.\n\nThe resulting design was a web-based tool that supports bulk quoting with built-in logic for standard jobs, serial-specific parts and labor, and flexible pricing models. The redesign emphasized usability and trust—ensuring reps could quote complex fleets confidently while maintaining full visibility into quote breakdowns. By integrating with iQuote and CloudLink, the tool also aligned with broader dealer workflows and system architecture.",
     "tags": [
-      "UX",
-      "Design System",
       "Figma",
       "SaaS"
     ],
-    "impact": [
-      "Reduced dev implementation time by 20%, improved component reuse and cross-product consistency."
+    "impact": "<ul><li>Reduced average quoting time by over 70%</li><li>Enabled fleet-level quoting, which was not previously feasible</li><li>Improved data accuracy through automated job/parts matching by serial number</li><li>Increased adoption by sales teams due to intuitive UX and transparent quote logic</li></ul>",
+    "problem": [
+      "Sales reps were manually quoting services for each machine of fleets using spreadsheets, resulting in a time-consuming, error-prone process that made larger fleet-level quotes nearly impossible and reduced pricing consistency across teams."
     ],
-    "problem": [],
-    "solution": [],
-    "slug": "cross-product-design-system"
+    "solution": "<ul><li>Designed a full web UI to support quoting multiple machines at once</li><li>Built clear, modular quote sections: customer info, quote info, revisions, equipment details, and financial breakdowns</li><li>Integrated standard job logic and serial-specific pricing to ensure accurate work order segments</li><li>Supported pricing flexibility: standard pricing vs. customer-specific pricing and discounts</li><li>Allowed real-time feedback for errors like missing standard jobs or invalid configurations</li><li>Streamlined the quoting workflow across screens (Quote List → Quote → Revision → Equipment)</li></ul>",
+    "slug": "service-agreement-quoting-saq-tool-redesign"
   },
   {
     "title": "Security & Vulnerability Dashboard",
-    "summary": "Designed a clear, actionable dashboard to surface critical vulnerabilities for developers.",
-    "overview": "Redesigned a security dashboard to surface and prioritize vulnerabilities for developers using open-source packages. Made actionable data more accessible and improved team adoption.",
+    "summary": "Built a centralized dashboard that helps developers and teams proactively track and resolve security vulnerabilities in their open source dependencies.",
+    "overview": "I built a Vulnerability Dashboard that gives developers a clear, real‑time view of every open‑source CVE in their codebase. It pulls live data across all projects, ranks issues by severity, and links straight to the affected package for one‑click fixes. Color‑coded visuals, fast search, and smart filters make triage simple so teams can close high‑risk gaps in minutes instead of days. With this one-page tool, engineers and security leads have cut response times and lowered overall exposure.",
     "tags": [
-      "UX",
       "Dashboard",
       "Security",
       "DevTools"
     ],
-    "impact": [
-      "Increased vulnerability engagement by 17%; faster remediation cycles."
+    "impact": "<ul><li>Gave organizations real-time visibility into 100% of open source CVEs across their stack</li><li>Reduced security blind spots and manual auditing overhead</li><li>Accelerated response times by making vulnerabilities easier to discover, assess, and fix</li></ul>",
+    "problem": [
+      "Development teams were flying blind when it came to open source security. Vulnerabilities buried deep in dependencies often went unnoticed, increasing the risk of exploits and technical debt. There was no easy way to audit all packages in use or prioritize remediation."
     ],
-    "problem": [],
-    "solution": [],
+    "solution": "<ul><li>Designed a centralized dashboard showing all vulnerabilities (CVEs) across org-wide projects</li><li>Grouped issues by severity (Critical, High, Medium, Low, Unscored) using color-coded indicators</li><li>Enabled filtering by severity, package, or project</li><li>Linked directly to relevant CVEs and affected components</li><li>Provided contextual descriptions and dispute notices where applicable</li></ul>",
     "slug": "security-vulnerability-dashboard"
   },
   {
     "title": "AI Workflow: Voice-to-Activity Logging",
     "summary": "Empowered sales reps to quickly log customer meetings by speaking into their phones—no typing, no lag, just smart, seamless activity capture.",
-    "overview": "I designed a voice-to-text workflow that helps sales reps log customer activities in real time using just their mobile devices. The feature uses AI-powered speech recognition to transcribe natural language into structured data, automatically syncing with backend systems via API. This eliminated the need for tedious manual entry, making it faster and easier for reps to capture important context while it's still fresh—whether walking out of a meeting or driving to the next one. The UX focused on simplicity, speed, and accessibility to ensure it supported real-world sales behavior without adding friction.",
+    "overview": "I designed a voice‑to‑text flow that lets busy sales reps capture customer interactions the moment they happen. Reps simply pull out their phone, speak naturally, and the AI engine converts their words into clean, structured data that sends it to the CRM over a secure API. No more typing notes in the parking lot or distracted driving, just a couple of taps and they’re on their way. Every screen is pared back to the essentials with large hit targets for the reps on the go. The experience feels fast, intuitive, and forgiving.",
     "tags": [
-      "UX",
       "AI",
       "SaaS",
       "B2B"
