@@ -1,8 +1,10 @@
 import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
-import resumePDF from "./AnnaKlibanovResume-2025.pdf";
 import GatsbyConfig from "../../gatsby-config";
+
+const resumePDF = "/AnnaKlibanovResume-2025.pdf"
+
 
 const resume = [
   {
@@ -89,7 +91,7 @@ const resume = [
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout pageTitle="home">
+    <Layout pageTitle="Resume">
       <div className="pt-10 flex flex-wrap  justify-between items-baseline">
         {/* <div className="h-60">
           <StaticImage
@@ -107,14 +109,7 @@ const IndexPage = ({ data }) => {
         </div> */}
 
         <h1 className="my-4 text-5xl font-bold leading-tight">Anna Klibanov<a class="flex text-sm font-normal" href="mailto:anna.klibanov@gmail.com">anna.klibanov@gmail.com</a></h1>
-        <a
-            href={resumePDF}
-            target="_blank"
-            rel="noreferrer"
-            className="right button block w-fit bg-cyan-600 hover:bg-cyan-700 text-white text-sm py-2 px-4 rounded-full"
-          >
-            Download Resume
-          </a>
+        
       </div>
       <section className="py-5" id="resume">
         <h2 className="w-full my-2 mb-8 text-3xl font-bold">Work Experience</h2>
@@ -149,26 +144,21 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
       <section className="py-5" id="skills">
-        <div className="container text-base mx-auto pt-4 pb-8 text-xl">
           <h2 className="w-full my-2 mb-8 text-3xl font-bold">Skills</h2>
           <div className="w-full">
               <p className="mb-3"><span className="font-bold text-cyan-400">Product & Process:</span> Product Design, UX/UI Design, User Research & Usability Testing, Design Systems, SDLC Process Integration, Agile & Scrum, Roadmap Planning, Product-Led Growth</p>
               <p className="mb-3"><span className="font-bold text-cyan-400">Collaboration & Leadership:</span> Cross-functional Collaboration, Team Leadership & Mentorship, Stakeholder Communication</p>
               <p className="mb-3"><span className="font-bold text-cyan-400">Tools & Technologies:</span> Figma, Adobe Creative Suite, Visual Studio Code, Git, HTML/CSS/JS, Jira, Remote Collaboration Tools</p>
-          </div>
         </div>
       </section>
       <section className="py-5" id="skills">
-        <div className="container text-base mx-auto pt-4 pb-8 text-xl">
           <h2 className="w-full my-2 mb-8 text-3xl font-bold">Education</h2>
           <div className="w-full">
               <p className="mb-3"><span className="font-bold text-cyan-400">Certified ScrumMaster (CSM)</span> Scrum Alliance | 2020</p>
               <p className="mb-3"><span className="font-bold text-cyan-400">Bachelor of Design (Honours)</span> York University / Sheridan College | 2006–2010</p>
-          </div>
         </div>
       </section>
       <section className="py-5 contact">
-        <div className="container mx-auto pt-4 pb-8 text-xl">
           <h2 className="w-full my-2 mb-8 text-3xl font-bold">Contact</h2>
           <p className="leading-normal mb-6">
             I'm currently considering opportunities as a Product Designer or if
@@ -201,19 +191,18 @@ const IndexPage = ({ data }) => {
             Dribbble
           </a>
          
+          <button
+            href={resumePDF}
+            target="_blank"
+            rel="noreferrer"
+            className="btn mt-10 block w-fit"
+          >
+            Download Resume
+          </button>
           
-          
-        </div>
       </section>
     </Layout>
   );
 };
 
 export default IndexPage;
-
-export const Head = () => (
-  <>
-    <title>{GatsbyConfig.siteMetadata.title}</title>
-    <meta name="description" content={GatsbyConfig.siteMetadata.description} />
-  </>
-);

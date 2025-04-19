@@ -2,6 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-slate-900 text-white font-sans antialiased leading-relaxed;
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl font-bold text-white mb-2;
+  }
+
+  h2 {
+    @apply text-2xl font-bold text-white mb-4;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold text-white mb-2;
+  }
+
+  a {
+    @apply text-cyan-400 underline hover:text-cyan-300 transition-colors;
+  }
+
+  p {
+    @apply text-white/80 mb-3 text-sm;
+  }
+
+  ul {
+    @apply list-disc list-inside space-y-1 text-white/90 text-sm;
+  }
+
+  nav ul {
+    @apply list-none
+  }
+
+  nav ul > li {
+    margin: 0!important;
+  }
+
+  nav a {
+    @apply no-underline
+  }
+
+  button,
+  .btn {
+    @apply inline-block bg-cyan-600 text-white text-lg px-4 py-2 rounded-md  hover:bg-cyan-500 hover:text-white transition no-underline;
+  }
+  
+
+  header a {
+    @apply text-white/60 text-sm hover:text-white transition;
+  }
+
+  header a.active {
+    @apply text-white border-b-2 border-cyan-400;
+  }
+}
+
+@layer components {
+    .card {
+      @apply  items-center gap-9 flex flex-col md:flex-row flex-wrap  text-lg rounded-md overflow-hidden;
+      background-color: rgb(1, 32, 40);
+      border:1px solid rgb(1, 21, 26);
+      max-height: 500px;
+    }
+
+    .card .portfolio-image {
+        @apply h-full overflow-hidden;
+    }
+    .card .content {
+        @apply p-10;
+    }
+
+    .card h3 {
+        @apply mb-5;
+    }
+
+    .card .btn {
+        @apply mt-10;
+    }
+
+  }
+
 body {
     background-color: rgb(0 36 45);
     margin:2em;
@@ -20,6 +101,9 @@ body {
  }
 
  
+header {
+    padding: 20px 0;
+}
 
 nav {
     justify-content: flex-end;
@@ -34,6 +118,9 @@ nav li a {
     padding-bottom:5px;
     transition: all 0.3s;
     opacity: 0.6;
+    color: inherit ;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 nav li a:hover {
@@ -45,18 +132,7 @@ nav li a[aria-current] {
     opacity: 1;
 }
 
-main a:not(.button) {
-    text-decoration: underline;
-    --tw-text-opacity: 1;
-    color: rgb(34 211 238 / var(--tw-text-opacity));
-    opacity: 0.8;
-    transition: 0.3s all;
-}
 
-main a:hover {
-    opacity: 1;
-   
-}
 
 .startyear,
 .endyear {
@@ -97,17 +173,31 @@ main a:hover {
 }
 
 
-.portfolio a.portfolio-image {
-    display: block;
+.portfolio-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 2 / 1; 
     overflow: hidden;
-    
+  }
+
+.portfolio-image img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+    transition: transform 0.5s ease;
 }
 
-.portfolio a.portfolio-image,
-.portfolio a.portfolio-image * {
-    transition: all .2s ease-in-out;
+.portfolio-image,
+.portfolio-image * {
+    transition: scale .2s ease-in-out;
 }
 
-.portfolio a.portfolio-image:hover img {
-    transform:scale(1.05);
+.card:hover img {
+    transform: translate(-50%, -50%) scale(1.05);
 }

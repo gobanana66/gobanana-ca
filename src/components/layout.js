@@ -1,30 +1,51 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+import { Helmet } from 'react-helmet'
+import { StaticImage } from "gatsby-plugin-image";
 
-const bannerStyle = {
-    fontSize: 180,
-    fontWeight: 'bold',
-    position: 'fixed',
-    zIndex: -1,
-    opacity: .05,
-    lineHeight: 0.85,
-    textTransform: 'uppercase',
-    left: 0,
-    top: 200,
+
+
+const resumePDF = "/AnnaKlibanovResume-2025.pdf"
+
+function toTitleCase(str) {
+  return str.replace(
+    /\w\S*/g,
+    text => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase()
+  );
 }
 
-const Layout = ({ pageTitle, children }) => {
+const Layout = ({ pageTitle, description = '', children }) => {
+
+  const fullTitle = pageTitle
+    ? `${toTitleCase(pageTitle)} – Anna Klibanov`
+    : 'Anna Klibanov – Senior Product/UX Designer'
+
+  const metaDescription = description || "Anna Klibanov is a Senior UX/UI and product designer blending strategy, user-centered design, and front-end development.";
+
 
   return (
     <div className="text-slate-300  max-w-6xl md:mx-auto">
-        <div className="banner" style={bannerStyle}>Anna Klibanov</div>
-      <nav className="flex py-5" data-page={pageTitle}>
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/portfolio">Portfolio</Link></li>
-          <li><Link to="/resume">Resume</Link></li>
-        </ul>
-      </nav>
+       <Helmet>
+        <title>{fullTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta property="og:title" content={fullTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta name="twitter:title" content={fullTitle} />
+        <meta name="twitter:description" content={metaDescription} />
+      </Helmet>
+       <header className="flex justify-between items-center">
+          <Link to="/" className="flex items-center gap-2 text-lg font-semibold no-underline"><div className="rounded-full overflow-hidden">
+            <img src="/profile.jpg" className="h-[40px]" />
+        </div>Anna Klibanov</Link>
+        <nav className="flex items-center py-5" data-page={pageTitle}>
+          <ul>
+            {/* <li><Link to="/work">Work</Link></li> */}
+            <li><Link to="/resume">Resume</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
+          </ul>
+        </nav>
+        
+       </header>
       <main>
         {children}
       </main>
