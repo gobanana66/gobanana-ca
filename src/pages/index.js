@@ -90,7 +90,7 @@ const PortfolioPage = ({ data }) => {
                     </a>
                   )}
                   <Link className="btn" to={`/work/${item.slug}`}>Learn More</Link>
-                </div> <div className="flex-1 portfolio-image bg-red-500">
+                </div> <div className="flex-1 portfolio-image">
                   <div className="absolute inset-0"
                     >
                       {imageData && (
