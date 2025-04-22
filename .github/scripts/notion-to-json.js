@@ -15,17 +15,11 @@ const slugify = (text) => {
     .replace(/^-+|-+$/g, "");
 };
 
-// Convert bullet list strings to HTML
-const convertToHtmlList = (text) => {
-  const items = text
+const parseBulletsToArray = (text) => {
+  return text
     .split("\n")
     .map((item) => item.replace(/•\s*/, "").trim())
     .filter(Boolean);
-  if (items.length > 1) {
-    return `<ul>${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
-  } else {
-    return items;
-  }
 };
 
 function formatParagraphs(text) {
@@ -82,9 +76,9 @@ async function fetchNotionData() {
       summary,
       overview,
       tags,
-      impact,
-      problem,
-      solution,
+      impact: parseBulletsToArray(impact),
+      problem: parseBulletsToArray(problem),
+      solution: parseBulletsToArray(solution),
       slug: slugify(title),
     };
   });
