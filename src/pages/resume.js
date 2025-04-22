@@ -176,13 +176,13 @@ const IndexPage = ({ data }) => {
         <div className="w-full">
           <p className="mb-3">
             <span className="font-bold text-pink-500">
-              Certified ScrumMaster(CSM)
+              Certified ScrumMaster(CSM){" "}
             </span>
             Scrum Alliance | 2020
           </p>
           <p className="mb-3">
             <span className="font-bold text-pink-500">
-              Bachelor of Design(Honours)
+              Bachelor of Design(Honours){" "}
             </span>
             York University / Sheridan College | 2006–2010
           </p>
