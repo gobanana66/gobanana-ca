@@ -3,7 +3,7 @@ module.exports = {
     title: "Anna Klibanov – Senior Product/UX Designer",
     description: "Thoughtful UX. Scalable systems. Clean execution.",
     siteUrl: "https://gobanana.ca",
-    image: "/profile.jpg",
+    image: "/banner.jpg",
   },
   plugins: [
     "gatsby-plugin-postcss",
