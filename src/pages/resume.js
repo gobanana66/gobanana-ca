@@ -96,7 +96,7 @@ const IndexPage = ({ data }) => {
         <h1 className="my-4 text-5xl font-bold leading-tight">
           Anna Klibanov
           <a
-            class="flex text-sm font-normal"
+            className="flex text-sm font-normal"
             href="mailto:anna.klibanov@gmail.com"
           >
             anna.klibanov @gmail.com

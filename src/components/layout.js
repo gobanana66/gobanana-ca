@@ -81,7 +81,7 @@ const Layout = ({
             next great full-time adventure.
           </p>
           <div className="links text-center text-3xl leading-relaxed pb-8">
-            <div class="flex flex-col sm:flex-row justify-center gap-4 text-center">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 text-center">
               <a
                 href="mailto:anna.klibanov@gmail.com"
                 className="btn py-5 px-10"

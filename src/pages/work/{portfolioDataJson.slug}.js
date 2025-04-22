@@ -73,6 +73,8 @@ const CaseStudy = ({ params, data }) => {
     fieldsToConvert: ["impact", "problem", "solution"],
   });
 
+  console.log(item);
+
   return (
     <Layout pageTitle={item.title}>
       <section className="py-5 portfolio">

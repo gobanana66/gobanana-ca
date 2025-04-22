@@ -52,6 +52,12 @@ async function fetchNotionData() {
     const response = await notion.databases.query({
       database_id: databaseId,
       start_cursor: cursor,
+      sorts: [
+        {
+          property: "Order",
+          direction: "ascending",
+        },
+      ],
     });
 
     pages.push(...response.results);
