@@ -82,9 +82,9 @@ async function fetchNotionData() {
       summary,
       overview,
       tags,
-      impact: convertToHtmlList(impact),
-      problem: convertToHtmlList(problem),
-      solution: convertToHtmlList(solution),
+      impact,
+      problem,
+      solution,
       slug: slugify(title),
     };
   });

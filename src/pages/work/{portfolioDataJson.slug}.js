@@ -73,7 +73,7 @@ const CaseStudy = ({ params, data }) => {
     fieldsToConvert: ["impact", "problem", "solution"],
   });
 
-  console.log(item);
+  console.log(itemHtml);
 
   return (
     <Layout pageTitle={item.title}>
