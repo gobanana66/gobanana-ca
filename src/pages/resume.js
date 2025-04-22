@@ -1,7 +1,5 @@
 import * as React from "react";
 import Layout from "../components/layout";
-import { StaticImage } from "gatsby-plugin-image";
-import GatsbyConfig from "../../gatsby-config";
 import Seo from "../components/Seo";
 
 const resumePDF = "/AnnaKlibanovResume-2025.pdf";
@@ -93,16 +91,17 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <div className="pt-10 flex flex-wrap  justify-between items-baseline">
-        {}
+        {" "}
+        {}{" "}
         <h1 className="my-4 text-5xl font-bold leading-tight">
-          Anna Klibanov
+          Anna Klibanov{" "}
           <a
             className="flex text-sm font-normal"
             href="mailto:anna.klibanov@gmail.com"
           >
-            anna.klibanov @gmail.com
-          </a>
-        </h1>
+            anna.klibanov @gmail.com{" "}
+          </a>{" "}
+        </h1>{" "}
         <a
           href={resumePDF}
           download
@@ -110,12 +109,16 @@ const IndexPage = ({ data }) => {
           rel="noreferrer"
           className="btn mt-10 block w-fit"
         >
-          Download Resume
-        </a>
-      </div>
+          Download Resume{" "}
+        </a>{" "}
+      </div>{" "}
       <section className="py-5" id="resume">
-        <h2 className="w-full my-2 mb-8 text-3xl font-bold">Work Experience</h2>
+        <h2 className="w-full my-2 mb-8 text-3xl font-bold">
+          {" "}
+          Work Experience{" "}
+        </h2>{" "}
         <div className="w-full  flex flex-col flex-grow flex-shrink">
+          {" "}
           {resume.map((resumeItem) => (
             <div
               className="resume-item mb-2 flex-1 flex flex-wrap"
@@ -123,72 +126,79 @@ const IndexPage = ({ data }) => {
             >
               <div className="w-full">
                 <div className="title font-semibold text-pink-500">
-                  {resumeItem.title}
-                </div>
+                  {" "}
+                  {resumeItem.title}{" "}
+                </div>{" "}
                 <div className="company text-slate-300 mb-4 text-sm">
-                  <span> {resumeItem.company} </span>
+                  <span> {resumeItem.company} </span>{" "}
                   <span className="date text-slate-400">
-                    <span className="startyear"> {resumeItem.startyear}–</span>
-                    <span className="endyear">{resumeItem.endyear} </span>
-                  </span>
-                </div>
+                    <span className="startyear"> {resumeItem.startyear}– </span>{" "}
+                    <span className="endyear"> {resumeItem.endyear} </span>{" "}
+                  </span>{" "}
+                </div>{" "}
                 <div className="description text-sm mb-7">
-                  {resumeItem.description}
+                  {" "}
+                  {resumeItem.description}{" "}
                   <ul className="list-disc ml-4">
+                    {" "}
                     {resumeItem.bullets.map((resumeBullet, index) => (
                       <li className="mb-2" key={index}>
-                        {resumeBullet}
+                        {" "}
+                        {resumeBullet}{" "}
                       </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+                    ))}{" "}
+                  </ul>{" "}
+                </div>{" "}
+              </div>{" "}
             </div>
-          ))}
-        </div>
-      </section>
+          ))}{" "}
+        </div>{" "}
+      </section>{" "}
       <section className="py-5" id="skills">
-        <h2 className="w-full my-2 mb-8 text-3xl font-bold"> Skills </h2>
+        <h2 className="w-full my-2 mb-8 text-3xl font-bold"> Skills </h2>{" "}
         <div className="w-full">
           <p className="mb-3">
-            <span className="font-bold text-pink-500">Product & Process: </span>
-            Product Design, UX/UI Design, User Research & Usability Testing,
+            <span className="font-bold text-pink-500">
+              {" "}
+              Product & Process:{" "}
+            </span>
+            Product Design, UX / UI Design, User Research & Usability Testing,
             Design Systems, SDLC Process Integration, Agile & Scrum, Roadmap
-            Planning, Product - Led Growth
-          </p>
+            Planning, Product - Led Growth{" "}
+          </p>{" "}
           <p className="mb-3">
             <span className="font-bold text-pink-500">
               Collaboration & Leadership:{" "}
             </span>
-            Cross-functional Collaboration, Team Leadership & Mentorship,
-            Stakeholder Communication
-          </p>
+            Cross - functional Collaboration, Team Leadership & Mentorship,
+            Stakeholder Communication{" "}
+          </p>{" "}
           <p className="mb-3">
             <span className="font-bold text-pink-500">
               Tools & Technologies:{" "}
             </span>
-            Figma, Adobe Creative Suite, Visual Studio Code, Git, HTML/CSS / JS,
-            Jira, Remote Collaboration Tools
-          </p>
-        </div>
-      </section>
+            Figma, Adobe Creative Suite, Visual Studio Code, Git, HTML / CSS /
+            JS, Jira, Remote Collaboration Tools{" "}
+          </p>{" "}
+        </div>{" "}
+      </section>{" "}
       <section className="py-5" id="skills">
-        <h2 className="w-full my-2 mb-8 text-3xl font-bold"> Education </h2>
+        <h2 className="w-full my-2 mb-8 text-3xl font-bold"> Education </h2>{" "}
         <div className="w-full">
           <p className="mb-3">
             <span className="font-bold text-pink-500">
               Certified ScrumMaster(CSM){" "}
             </span>
-            Scrum Alliance | 2020
-          </p>
+            Scrum Alliance | 2020{" "}
+          </p>{" "}
           <p className="mb-3">
             <span className="font-bold text-pink-500">
               Bachelor of Design(Honours){" "}
             </span>
-            York University / Sheridan College | 2006–2010
-          </p>
-        </div>
-      </section>
+            York University / Sheridan College | 2006– 2010{" "}
+          </p>{" "}
+        </div>{" "}
+      </section>{" "}
       <section className="py-5 contact">
         <a
           href={resumePDF}
@@ -197,9 +207,9 @@ const IndexPage = ({ data }) => {
           rel="noreferrer"
           className="btn mt-10 block w-fit"
         >
-          Download Resume
-        </a>
-      </section>
+          Download Resume{" "}
+        </a>{" "}
+      </section>{" "}
     </Layout>
   );
 };

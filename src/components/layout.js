@@ -9,14 +9,6 @@ const Layout = ({
   children,
   showFooter = true,
 }) => {
-  const fullTitle = pageTitle
-    ? `${pageTitle} – Anna Klibanov`
-    : "Anna Klibanov – Senior Product/UX Designer";
-
-  const metaDescription =
-    description ||
-    "Anna Klibanov is a Senior UX/UI and product designer blending strategy, user-centered design, and front-end development.";
-
   return (
     <div className="text-slate-300  max-w-7xl md:mx-auto">
       <header className="flex justify-between items-center">
@@ -25,7 +17,11 @@ const Layout = ({
           className="flex items-center gap-2 text-lg font-semibold no-underline text-white"
         >
           <div className="rounded-full overflow-hidden">
-            <img src="/profile.jpg" className="h-[40px]" />
+            <img
+              src="/profile.jpg"
+              className="h-[40px]"
+              alt="Anna Klibanov profile pic"
+            />
           </div>
           Anna Klibanov
         </Link>
@@ -36,15 +32,16 @@ const Layout = ({
               <Link to="/resume">Resume</Link>
             </li>
             <li>
-              <Link to="mailto:anna.klibanov@gmail.com">Email</Link>
+              <a href="mailto:anna.klibanov@gmail.com">Email</a>
             </li>
             <li>
-              <Link
-                to="https://www.linkedin.com/in/annaklibanov/"
+              <a
+                href="https://www.linkedin.com/in/annaklibanov/"
                 target="_blank"
+                rel="noreferrer"
               >
                 LinkedIn
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>
@@ -72,6 +69,7 @@ const Layout = ({
               <a
                 href="https://www.linkedin.com/in/annaklibanov/"
                 target="_blank"
+                rel="noreferrer"
                 className="btn py-5 px-10"
               >
                 <FontAwesomeIcon icon={["fab", "linkedin"]} /> Connect With Me

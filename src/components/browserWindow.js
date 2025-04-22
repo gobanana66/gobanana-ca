@@ -1,5 +1,5 @@
-import React from "react"
-import "./browserWindow.css" 
+import React from "react";
+import "./browserWindow.css";
 
 const BrowserWindow = ({ children, className = "" }) => {
   return (
@@ -11,11 +11,9 @@ const BrowserWindow = ({ children, className = "" }) => {
           <span className="circle green" />
         </div>
       </div>
-      <div className="content">
-        {children}
-      </div>
+      <div className="content">{children}</div>
     </div>
-  )
-}
+  );
+};
 
-export default BrowserWindow
+export default BrowserWindow;

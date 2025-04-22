@@ -1,5 +1,5 @@
 import * as React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import { GatsbyImage } from "gatsby-plugin-image";
 import Seo from "../../components/Seo";
@@ -16,7 +16,7 @@ const getImagesBySlug = (slug, allFile) => {
     };
     return getIndex(a.name) - getIndex(b.name);
   });
-
+  console.log(sorted);
   return sorted;
 };
 
@@ -73,8 +73,6 @@ const CaseStudy = ({ params, data }) => {
   const itemHtml = parseArrayFieldsToHTML(item, {
     fieldsToConvert: ["impact", "problem", "solution"],
   });
-
-  console.log(itemHtml);
 
   return (
     <Layout pageTitle={item.title}>
@@ -158,7 +156,7 @@ const CaseStudy = ({ params, data }) => {
           </>
         )}
       </section>
-      <div className="grid-cols-4 grid-cols-2  sm:grid-cols-4 basis-[20vw] flex-1"></div>
+      <div className="none grid-cols-4 grid-cols-2  sm:grid-cols-4 basis-[20vw] flex-1"></div>
     </Layout>
   );
 };
