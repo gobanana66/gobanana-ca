@@ -73,6 +73,8 @@ const CaseStudy = ({ params, data }) => {
     fieldsToConvert: ["impact", "problem", "solution"],
   });
 
+  console.log(itemHtml);
+
   return (
     <Layout pageTitle={item.title}>
       <section className="py-5 portfolio">
@@ -92,7 +94,12 @@ const CaseStudy = ({ params, data }) => {
           />
         )}
         <div className="portfolio-section">
-          <h3> Overview </h3> <p> {item.overview} </p>
+          <h3> Overview </h3>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: itemHtml.overview,
+            }}
+          />
         </div>
         {overviewImages?.length > 0 && (
           <div className="grid grid-cols-2 gap-12 my-20">
@@ -103,6 +110,7 @@ const CaseStudy = ({ params, data }) => {
                   image={img.childImageSharp.gatsbyImageData}
                   alt={`${item.title} overview image ${i + 2}`}
                   className="shadow-xl rounded-md"
+                  objectFit="contain"
                 />
               ) : null
             )}
@@ -142,6 +150,7 @@ const CaseStudy = ({ params, data }) => {
                   image={img.childImageSharp.gatsbyImageData}
                   alt={`${item.title} grid image ${i + 4}`}
                   className="shadow-xl rounded-lg"
+                  objectFit="contain"
                 />
               ))}
             </div>
@@ -168,7 +177,7 @@ export const query = graphql`
       nodes {
         name
         childImageSharp {
-          gatsbyImageData(placeholder: BLURRED, layout: CONSTRAINED)
+          gatsbyImageData(placeholder: BLURRED)
         }
       }
     }
