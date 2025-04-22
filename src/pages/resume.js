@@ -150,21 +150,21 @@ const IndexPage = ({ data }) => {
         <h2 className="w-full my-2 mb-8 text-3xl font-bold"> Skills </h2>
         <div className="w-full">
           <p className="mb-3">
-            <span className="font-bold text-pink-500">Product & Process:</span>
+            <span className="font-bold text-pink-500">Product & Process: </span>
             Product Design, UX/UI Design, User Research & Usability Testing,
             Design Systems, SDLC Process Integration, Agile & Scrum, Roadmap
             Planning, Product - Led Growth
           </p>
           <p className="mb-3">
             <span className="font-bold text-pink-500">
-              Collaboration & Leadership:
+              Collaboration & Leadership:{" "}
             </span>
             Cross-functional Collaboration, Team Leadership & Mentorship,
             Stakeholder Communication
           </p>
           <p className="mb-3">
             <span className="font-bold text-pink-500">
-              Tools & Technologies:
+              Tools & Technologies:{" "}
             </span>
             Figma, Adobe Creative Suite, Visual Studio Code, Git, HTML/CSS / JS,
             Jira, Remote Collaboration Tools
@@ -184,7 +184,7 @@ const IndexPage = ({ data }) => {
             <span className="font-bold text-pink-500">
               Bachelor of Design(Honours)
             </span>
-            York University / Sheridan College | 2006– 2010
+            York University / Sheridan College | 2006–2010
           </p>
         </div>
       </section>
