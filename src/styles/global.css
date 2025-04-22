@@ -2,112 +2,180 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    background-color: rgb(0 36 45);
-    margin:2em;
+@layer base {
+  body {
+    @apply bg-pink-900 text-white font-sans antialiased leading-relaxed text-lg p-10;
+    background-color: rgb(10 37 47);
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-white mb-2;
+  }
+
+  h2 {
+    @apply text-2xl font-bold text-white mb-4;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold text-white mb-2;
+  }
+
+  a {
+    @apply text-cyan-400 underline hover:text-cyan-300 transition-colors;
+  }
+
+  p {
+    @apply text-white/80 mb-3;
+  }
+
+  ul {
+    @apply list-disc list-outside pl-5 space-y-3 text-white/90;
+  }
+
+  nav ul {
+    @apply list-none;
+  }
+
+  nav ul > li {
+    margin: 0 !important;
+  }
+
+  nav a {
+    @apply no-underline;
+  }
+
+  button,
+  .btn {
+    @apply inline-block bg-pink-600 text-white text-lg px-4 py-2 rounded-md  hover:bg-pink-500 hover:text-white transition no-underline;
+  }
+
+  header a {
+    @apply text-white/60 text-sm hover:text-white transition;
+  }
+
+  header a.active {
+    @apply text-white border-b-2 border-pink-400;
+  }
 }
 
+@layer components {
+  .card {
+    @apply gap-9 flex flex-col md:flex-row flex-wrap  text-lg rounded-md overflow-hidden no-underline text-white/70 hover:text-white/70 hover:bg-pink-500/10  hover:border-pink-500/40;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+  }
+
+  .card .portfolio-image {
+    @apply flex;
+  }
+
+  .card h3 {
+    @apply font-normal text-4xl;
+  }
+
+  .card .content {
+    @apply p-10 flex flex-col items-start justify-center;
+  }
+
+  .card h3 {
+    @apply mb-5;
+  }
+
+  .card .btn {
+    @apply mt-10;
+  }
+}
 
 @keyframes fadeInDown {
-    0% {
-       opacity: 0;
-       transform: translateY(-20px);
-    }
-    100% {
-       opacity: 1;
-       transform: translateY(0);
-    }
- }
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
- 
+header {
+  padding: 20px 0;
+}
 
 nav {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 nav ul {
-    display: flex;
-    gap:20px;
+  display: flex;
+  gap: 20px;
 }
 
 nav li a {
-    padding-bottom:5px;
-    transition: all 0.3s;
-    opacity: 0.6;
+  padding-bottom: 5px;
+  transition: all 0.3s;
+  opacity: 0.6;
+  color: inherit;
+  font-size: 16px;
 }
 
 nav li a:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
 nav li a[aria-current] {
-    border-bottom:3px solid rgb(8 145 178);
-    opacity: 1;
-}
-
-main a:not(.button) {
-    text-decoration: underline;
-    --tw-text-opacity: 1;
-    color: rgb(34 211 238 / var(--tw-text-opacity));
-    opacity: 0.8;
-    transition: 0.3s all;
-}
-
-main a:hover {
-    opacity: 1;
-   
+  border-bottom: 3px solid rgb(8 145 178);
+  opacity: 1;
 }
 
 .startyear,
 .endyear {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
-
 .tag {
-    color: rgb(203 213 225);
-    border-radius: 10px;
-    padding:3px 12px;
-    text-transform: uppercase;
-    font-weight: 600;
+  color: rgb(203 213 225);
+  border-radius: 10px;
+  padding: 3px 12px;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .tag-javascript {
-    background: #b49c00;
+  background: #b49c00;
 }
 
 .tag-html {
-    background: #b73737;
+  background: #b73737;
 }
 
 .tag-wordpress {
-    background: #21759b;
+  background: #21759b;
 }
 
 .tag-design {
-    background: #622181;
+  background: #622181;
 }
 
 .tag-api {
-    background:#06a06c;
+  background: #06a06c;
 }
 
 .tag-php {
-    background: #8892be;
+  background: #8892be;
 }
 
-
-.portfolio a.portfolio-image {
-    display: block;
-    overflow: hidden;
-    
+.portfolio-image img {
+  transition: all 0.2s ease-in-out !important;
 }
 
-.portfolio a.portfolio-image,
-.portfolio a.portfolio-image * {
-    transition: all .2s ease-in-out;
+.card:hover img {
+  transform: scale(1.05);
 }
 
-.portfolio a.portfolio-image:hover img {
-    transform:scale(1.05);
+.portfolio h3 {
+  @apply font-normal text-pink-500;
+}
+
+.portfolio .portfolio-section {
+  @apply text-white/70  gap-5 mb-20 grid grid-cols-1 sm:grid-cols-[150px,1fr] sm:gap-20;
 }
