@@ -1,18 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
-import { Helmet } from "react-helmet";
-import { StaticImage } from "gatsby-plugin-image";
 import "../utils/fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-const resumePDF = "/AnnaKlibanovResume-2025.pdf";
-
-function toTitleCase(str) {
-  return str.replace(
-    /\w\S*/g,
-    (text) => text.charAt(0).toUpperCase() + text.substring(1).toLowerCase()
-  );
-}
 
 const Layout = ({
   pageTitle,
@@ -30,14 +19,6 @@ const Layout = ({
 
   return (
     <div className="text-slate-300  max-w-7xl md:mx-auto">
-      <Helmet>
-        <title>{fullTitle}</title>
-        <meta name="description" content={metaDescription} />
-        <meta property="og:title" content={fullTitle} />
-        <meta property="og:description" content={metaDescription} />
-        <meta name="twitter:title" content={fullTitle} />
-        <meta name="twitter:description" content={metaDescription} />
-      </Helmet>
       <header className="flex justify-between items-center">
         <Link
           to="/"
@@ -130,3 +111,9 @@ const Layout = ({
 };
 
 export default Layout;
+export const Head = () => (
+  <>
+    <title>Hello World</title>
+    <meta name="description" content="Hello World" />
+  </>
+);

@@ -2,6 +2,7 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import GatsbyConfig from "../../gatsby-config";
+import Seo from "../components/Seo";
 
 const resumePDF = "/AnnaKlibanovResume-2025.pdf";
 
@@ -90,7 +91,7 @@ const resume = [
 
 const IndexPage = ({ data }) => {
   return (
-    <Layout pageTitle="Resume">
+    <Layout>
       <div className="pt-10 flex flex-wrap  justify-between items-baseline">
         {}
         <h1 className="my-4 text-5xl font-bold leading-tight">
@@ -204,3 +205,4 @@ const IndexPage = ({ data }) => {
 };
 
 export default IndexPage;
+export const Head = () => <Seo title="Resume" />;

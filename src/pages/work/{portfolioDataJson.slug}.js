@@ -2,6 +2,23 @@ import * as React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../../components/layout";
 import { GatsbyImage } from "gatsby-plugin-image";
+import Seo from "../../components/Seo";
+
+const getImagesBySlug = (slug, allFile) => {
+  const prefix = `portfolio_${slug}`;
+  const matches = allFile.nodes.filter(({ name }) => name.startsWith(prefix));
+
+  // Sort images by suffix number (default image has no number = 0)
+  const sorted = matches.sort((a, b) => {
+    const getIndex = (name) => {
+      const match = name.match(/-(\d+)$/);
+      return match ? parseInt(match[1]) : 0;
+    };
+    return getIndex(a.name) - getIndex(b.name);
+  });
+
+  return sorted;
+};
 
 const CaseStudy = ({ params, data }) => {
   const { portfolioDataJson: item, allFile } = data;
@@ -19,22 +36,6 @@ const CaseStudy = ({ params, data }) => {
   if (CustomTemplate) {
     return <CustomTemplate item={item} allFile={allFile} params={params} />;
   }
-
-  const getImagesBySlug = (slug, allFile) => {
-    const prefix = `portfolio_${slug}`;
-    const matches = allFile.nodes.filter(({ name }) => name.startsWith(prefix));
-
-    // Sort images by suffix number (default image has no number = 0)
-    const sorted = matches.sort((a, b) => {
-      const getIndex = (name) => {
-        const match = name.match(/-(\d+)$/);
-        return match ? parseInt(match[1]) : 0;
-      };
-      return getIndex(a.name) - getIndex(b.name);
-    });
-
-    return sorted;
-  };
 
   const images = getImagesBySlug(item.slug, allFile);
   const heroImage = images[0];
@@ -179,9 +180,24 @@ export const query = graphql`
         childImageSharp {
           gatsbyImageData(placeholder: BLURRED)
         }
+        publicURL
       }
     }
   }
 `;
 
 export default CaseStudy;
+export const Head = ({ data }) => {
+  const item = data.portfolioDataJson;
+  const heroImage = getImagesBySlug(item.slug, data.allFile)[0];
+  const ogImageUrl = heroImage?.publicURL;
+
+  return (
+    <Seo
+      title={item.title}
+      description={item.summary}
+      pathname={`/work/${item.slug}`}
+      image={ogImageUrl}
+    />
+  );
+};

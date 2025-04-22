@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import JSONData from "../data/portfolioData.json";
+import Seo from "../components/Seo";
 
 const PortfolioPage = ({ data }) => {
   // Memoized image lookup object
@@ -138,3 +139,4 @@ export const query = graphql`
 `;
 
 export default PortfolioPage;
+export const Head = () => <Seo />;
