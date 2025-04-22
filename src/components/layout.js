@@ -21,7 +21,7 @@ const Layout = ({
   showFooter = true,
 }) => {
   const fullTitle = pageTitle
-    ? `${toTitleCase(pageTitle)} – Anna Klibanov`
+    ? `${pageTitle} – Anna Klibanov`
     : "Anna Klibanov – Senior Product/UX Designer";
 
   const metaDescription =
