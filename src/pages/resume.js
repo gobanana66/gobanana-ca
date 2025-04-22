@@ -102,14 +102,15 @@ const IndexPage = ({ data }) => {
             anna.klibanov @gmail.com
           </a>
         </h1>
-        <button
+        <a
           href={resumePDF}
+          download
           target="_blank"
           rel="noreferrer"
           className="btn mt-10 block w-fit"
         >
           Download Resume
-        </button>
+        </a>
       </div>
       <section className="py-5" id="resume">
         <h2 className="w-full my-2 mb-8 text-3xl font-bold">Work Experience</h2>
@@ -188,14 +189,15 @@ const IndexPage = ({ data }) => {
         </div>
       </section>
       <section className="py-5 contact">
-        <button
+        <a
           href={resumePDF}
+          download
           target="_blank"
           rel="noreferrer"
           className="btn mt-10 block w-fit"
         >
           Download Resume
-        </button>
+        </a>
       </section>
     </Layout>
   );
