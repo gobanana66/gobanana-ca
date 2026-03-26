@@ -175,9 +175,9 @@ const IndexPage = ({ data }) => {
               {" "}
               Product & Process:{" "}
             </span>
-            Product Design, UX / UI Design, User Research & Usability Testing,
+            Product Design, UX/UI Design, User Research & Usability Testing,
             Design Systems, SDLC Process Integration, Agile & Scrum, Roadmap
-            Planning, Product - Led Growth{" "}
+            Planning, Product-Led Growth
           </p>{" "}
           <p className="mb-3">
             <span className="font-bold text-pink-500">
