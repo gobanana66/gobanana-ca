@@ -183,15 +183,15 @@ const IndexPage = ({ data }) => {
             <span className="font-bold text-pink-500">
               Collaboration & Leadership:{" "}
             </span>
-            Cross - functional Collaboration, Team Leadership & Mentorship,
+            Cross-functional Collaboration, Team Leadership & Mentorship,
             Stakeholder Communication{" "}
           </p>{" "}
           <p className="mb-3">
             <span className="font-bold text-pink-500">
               Tools & Technologies:{" "}
             </span>
-            Figma, Adobe Creative Suite, Visual Studio Code, Git, HTML / CSS /
-            JS, Jira, Remote Collaboration Tools{" "}
+            Figma, Adobe Creative Suite, Visual Studio Code, Git, HTML/CSS/JS,
+            Jira, Remote Collaboration Tools{" "}
           </p>{" "}
         </div>{" "}
       </section>{" "}
@@ -208,7 +208,7 @@ const IndexPage = ({ data }) => {
             <span className="font-bold text-pink-500">
               Bachelor of Design(Honours){" "}
             </span>
-            York University / Sheridan College | 2006– 2010{" "}
+            York University/Sheridan College | 2006– 2010{" "}
           </p>{" "}
         </div>{" "}
       </section>{" "}
