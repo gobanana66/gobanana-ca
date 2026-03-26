@@ -6,8 +6,21 @@ const resumePDF = "/AnnaKlibanovResume-2025.pdf";
 
 const resume = [
   {
-    startyear: "Nov 2023",
+    startyear: "July 2025",
     endyear: "Present",
+    title: "Lead Product Designer",
+    company: "Perch",
+    bullets: [
+      "Lead end-to-end design across a fintech platform spanning mortgage brokerage and lending, simplifying complex financial flows into intuitive user experiences",
+      "Built and scaled a modular design system in Figma (components, variants, tokens), improving consistency and accelerating development across web and mobile",
+      "Designed state-driven, logic-heavy interfaces (eligibility, conditional flows, CRUD), aligning UX closely with real product behavior",
+      "Partner with product and engineering in tight loops to ship high-quality, production-ready features with minimal iteration overhead",
+      "Use prototyping, user feedback, and analytics to refine flows and improve conversion across key journeys",
+    ],
+  },
+  {
+    startyear: "Nov 2023",
+    endyear: "Jul 2025",
     title: "Lead Product Designer",
     company: "Texada",
     bullets: [
@@ -99,7 +112,7 @@ const IndexPage = ({ data }) => {
             className="flex text-sm font-normal"
             href="mailto:anna.klibanov@gmail.com"
           >
-            anna.klibanov @gmail.com{" "}
+            anna.klibanov@gmail.com{" "}
           </a>{" "}
         </h1>{" "}
         <a
