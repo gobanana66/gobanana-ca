@@ -2,7 +2,7 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/Seo";
 
-const resumePDF = "/AnnaKlibanovResume-2026.pdf";
+const resumePDF = "/AnnaKlibanovResume.pdf";
 
 const resume = [
   {
